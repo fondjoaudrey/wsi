@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KDigit - Solutions Intelligentes & Équipements Réseau</title>
+    
+    <!-- Meta tags pour SEO -->
+    <meta name="description" content="KDigit : intégration de solutions numériques et vente d'équipements réseau au Cameroun. Vidéosurveillance, fibre optique, domotique, alarmes GPS, formation.">
+    <meta name="keywords" content="KDigit, réseaux, sécurité, caméras, fibre optique, domotique, alarmes GPS, équipements réseau, Cameroun">
+    <meta name="author" content="KDigit">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS CSS (animations au scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Particles.js (pour le fond animé) -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <!-- Typed.js (pour le titre dynamique) -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    
+    <!-- Notre CSS personnalisé -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Bouton WhatsApp flottant -->
+    <a href="https://wa.me/237693404172" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span>693 404 172</span>
+    </a>
+
+    <!-- ============================================ -->
+    <!-- HEADER / NAVIGATION                          -->
+    <!-- ============================================ -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span class="logo-text">K<span>Digit</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#accueil">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#equipements">Équipements</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#labo">Laboratoire</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#a-propos">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="#contact" class="btn btn-outline-orange devis-btn">Devis / Achat</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================ -->
+    <!-- SECTION HERO AVEC PARTICULES                -->
+    <!-- ============================================ -->
+    <section id="accueil" class="hero-section">
+        <!-- Conteneur pour les particules -->
+        <div id="particles-js"></div>
+        
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-lg-8" data-aos="fade-up">
+                    <div class="hero-content">
+                        <div class="typed-container">
+                            <span id="typed-text"></span>
+                        </div>
+                        <h1 class="hero-title d-none" id="main-title">
+                            Solutions IT & Sécurité <br>
+                            <span class="text-gradient">Intelligentes au Cameroun</span>
+                        </h1>
+                        <p class="hero-subtitle">
+                            KDigit intègre des solutions numériques de pointe et fournit des équipements réseau professionnels pour sécuriser et digitaliser votre entreprise ou résidence.
+                        </p>
+                        <div class="hero-buttons mt-4">
+                            <a href="#services" class="btn btn-orange me-3">Découvrir nos services</a>
+                            <a href="#contact" class="btn btn-outline-orange">Demander un devis</a>
+                        </div>
+                        <div class="social-links mt-5">
+                            <p class="mb-2">Suivez-nous :</p>
+                            <a href="https://www.facebook.com/intelligenceartificiell/about/" target="_blank" class="social-icon">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://wa.me/237693404172" target="_blank" class="social-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION SERVICES (7 CARTES)                  -->
+    <!-- ============================================ -->
+    <section id="services" class="services-section py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Nos <span class="text-orange">Services</span></h2>
+                <p class="section-subtitle">7 domaines d'expertise pour couvrir tous vos besoins numériques</p>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Service 1 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card glow-card">
+                        <div class="service-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h3>Réseaux intelligents & transfert de données</h3>
+                        <ul class="service-list">
+                            <li><i class="fas fa-check-circle"></i> Infrastructure LAN/WAN sécurisée</li>
+                            <li><i class="fas fa-check-circle"></i> Transfert de données haut débit</li>
+                            <li><i class="fas fa-check-circle"></i> Interconnexion de sites</li>
+                            <li><i class="fas fa-check-circle"></i> Solutions WiFi professionnelles</li>
+                            <li><i class="fas fa-check-circle"></i> Optimisation de bande passante</li>
+                        </ul>
+                        <div class="service-actions">
+                            <a href="#contact" class="btn-service devis-only">Demander un devis →</a>
+                            <a href="#contact" class="btn-service equipement-link" data-categorie="reseau">Voir équipements →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card glow-card">
+                        <div class="service-icon">
+                            <i class="fas fa-building-shield"></i>
+                        </div>
+                        <h3>Sécurité pour maisons & bâtiments intelligents</h3>
+                        <ul class="service-list">
+                            <li><i class="fas fa-check-circle"></i> Contrôle d'accès biométrique</li>
+                            <li><i class="fas fa-check-circle"></i> Vidéosurveillance IP</li>
+                            <li><i class="fas fa-check-circle"></i> Détection d'intrusion</li>
+                            <li><i class="fas fa-check-circle"></i> Systèmes d'alarme connectés</li>
+                            <li><i class="fas fa-check-circle"></i> Supervision à distance 24/7</li>
+                        </ul>
+                        <div class="service-actions">
+                            <a href="#contact" class="btn-service devis-only">Demander un devis →</a>
+                            <a href="#contact" class="btn-service equipement-link" data-categorie="securite">Voir équipements →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card glow-card">
+                        <div class="service-icon">
+                            <i class="fas fa-car-side"></i>
+                        </div>
+                        <h3>Alarmes voitures intelligentes GSM/GPS</h3>
+                        <ul class="service-list">
+                            <li><i class="fas fa-check-circle"></i> Alarmes GSM avec notification instantanée</li>
+                            <li><i class="fas fa-check-circle"></i> Géolocalisation GPS précise</li>
+                            <li><i class="fas fa-check-circle"></i> Immobilisation moteur à distance</li>
+                            <li><i class="fas fa-check-circle"></i> Historique des trajets</li>
+                            <li><i class="fas fa-check-circle"></i> Idéal pour flottes de véhicules</li>
+                        </ul>
+                        <div class="service-actions">
+                            <a href="#contact" class="btn-service devis-only">Demander un devis →</a>
+                            <a href="#contact" class="btn-service equipement-link" data-categorie="gps">Voir équipements →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card glow-card">
+                        <div class="service-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>Solutions d'automatisation</h3>
+                        <ul class="service-list">
+                            <li><i class="fas fa-check-circle"></i> Automatisation éclairage et climatisation</li>
+                            <li><i class="fas fa-check-circle"></i> Gestion technique centralisée</li>
+                            <li><i class="fas fa-check-circle"></i> Programmation sur mesure</li>
+                            <li><i class="fas fa-check-circle"></i> Capteurs intelligents</li>
+                            <li><i class="fas fa-check-circle"></i> Économies d'énergie garanties</li>
+                        </ul>
+                        <div class="service-actions">
+                            <a href="#contact" class="btn-service devis-only">Demander un devis →</a>
+                            <a href="#contact" class="btn-service equipement-link" data-categorie="automatisation">Voir équipements →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card glow-card">
+                        <div class="service-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <h3>Solutions matérielles & logicielles</h3>
+                        <ul class="service-list">
+                            <li><i class="fas fa-check-circle"></i> Fourniture et installation d'équipements</li>
+                            <li><i class="fas fa-check-circle"></i> Configuration de serveurs et stockage</li>
+                            <li><i class="fas fa-check-circle"></i> Déploiement de logiciels métier</li>
+                            <li><i class="fas fa-check-circle"></i> Solutions cloud hybrides</li>
+                            <li><i class="fas fa-check-circle"></i> Maintenance préventive</li>
+                        </ul>
+                        <div class="service-actions">
+                            <a href="#contact" class="btn-service devis-only">Demander un devis →</a>
+                            <a href="#contact" class="btn-service equipement-link" data-categorie="hardware">Voir équipements →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card glow-card">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Conseil & Consulting</h3>
+                        <ul class="service-list">
+                            <li><i class="fas fa-check-circle"></i> Audit d'infrastructure existante</li>
+                            <li><i class="fas fa-check-circle"></i> Conseil en architecture réseau</li>
+                            <li><i class="fas fa-check-circle"></i> Étude de faisabilité technique</li>
+                            <li><i class="fas fa-check-circle"></i> Accompagnement projet</li>
+                            <li><i class="fas fa-check-circle"></i> Optimisation des coûts IT</li>
+                        </ul>
+                        <a href="#contact" class="btn-service devis-only">Demander un devis →</a>
+                    </div>
+                </div>
+                
+                <!-- Service 7 -->
+                <div class="col-lg-4 col-md-6 mx-auto" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card glow-card">
+                        <div class="service-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h3>Formation</h3>
+                        <ul class="service-list">
+                            <li><i class="fas fa-check-circle"></i> Formation administration réseau</li>
+                            <li><i class="fas fa-check-circle"></i> Utilisation des outils de sécurité</li>
+                            <li><i class="fas fa-check-circle"></i> Gestion des systèmes d'alarme</li>
+                            <li><i class="fas fa-check-circle"></i> Maintenance préventive</li>
+                            <li><i class="fas fa-check-circle"></i> Support post-formation inclus</li>
+                        </ul>
+                        <a href="#contact" class="btn-service devis-only">Demander un devis →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION ÉQUIPEMENTS                          -->
+    <!-- ============================================ -->
+    <section id="equipements" class="equipements-section py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Équipements <span class="text-orange">Réseau</span></h2>
+                <p class="section-subtitle">Matériel professionnel pour tous vos besoins d'infrastructure</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-right">
+                    <div class="equipement-card">
+                        <div class="equipement-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3>Switches & Routeurs</h3>
+                        <ul class="equipement-list">
+                            <li>Switches Cisco, MikroTik, TP-Link</li>
+                            <li>Routeurs professionnels</li>
+                            <li>Points d'accès Ubiquiti</li>
+                            <li>Pare-feux matériels</li>
+                        </ul>
+                        <a href="#contact" class="btn-equipement" data-produit="switches">Je veux acheter →</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="equipement-card">
+                        <div class="equipement-icon">
+                            <i class="fas fa-wifi"></i>
+                        </div>
+                        <h3>Bornes WiFi & Antennes</h3>
+                        <ul class="equipement-list">
+                            <li>Bornes WiFi intérieures/extérieures</li>
+                            <li>Antennes longue portée</li>
+                            <li>Répéteurs et amplificateurs</li>
+                            <li>Contrôleurs WiFi</li>
+                        </ul>
+                        <a href="#contact" class="btn-equipement" data-produit="wifi">Je veux acheter →</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-left">
+                    <div class="equipement-card">
+                        <div class="equipement-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h3>Câbles & Connectiques</h3>
+                        <ul class="equipement-list">
+                            <li>Câbles fibre optique</li>
+                            <li>Câbles RJ45 (cuivre)</li>
+                            <li>Baies de brassage</li>
+                            <li>Connecteurs et accessoires</li>
+                        </ul>
+                        <a href="#contact" class="btn-equipement" data-produit="cables">Je veux acheter →</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-right">
+                    <div class="equipement-card">
+                        <div class="equipement-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h3>Caméras & Sécurité</h3>
+                        <ul class="equipement-list">
+                            <li>Caméras IP haute définition</li>
+                            <li>Caméras thermiques</li>
+                            <li>Enregistreurs NVR</li>
+                            <li>Alarmes et détecteurs</li>
+                        </ul>
+                        <a href="#contact" class="btn-equipement" data-produit="cameras">Je veux acheter →</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="equipement-card">
+                        <div class="equipement-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <h3>Accessoires</h3>
+                        <ul class="equipement-list">
+                            <li>Boîtiers et coffrets</li>
+                            <li>Alimentations</li>
+                            <li>Supports muraux</li>
+                            <li>Outils d'installation</li>
+                        </ul>
+                        <a href="#contact" class="btn-equipement" data-produit="accessoires">Je veux acheter →</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-left">
+                    <div class="equipement-card">
+                        <div class="equipement-icon">
+                            <i class="fas fa-satellite-dish"></i>
+                        </div>
+                        <h3>GPS & Tracking</h3>
+                        <ul class="equipement-list">
+                            <li>Traceurs GPS véhicules</li>
+                            <li>Alarmes GSM</li>
+                            <li>Immobilisateurs</li>
+                            <li>Plateforme de suivi</li>
+                        </ul>
+                        <a href="#contact" class="btn-equipement" data-produit="gps">Je veux acheter →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION LABORATOIRE KDIGIT                    -->
+    <!-- ============================================ -->
+    <section id="labo" class="labo-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="section-title text-start">Laboratoire <span class="text-orange">KDigit</span></h2>
+                    <p class="labo-intro">L'innovation est au cœur de notre démarche. Dans notre laboratoire, nous testons et développons les technologies de demain.</p>
+                    
+                    <div class="labo-item">
+                        <div class="labo-dot"></div>
+                        <div class="labo-content">
+                            <h4>Test de reconnaissance faciale</h4>
+                            <p>Évaluation de solutions d'IA pour le contrôle d'accès nouvelle génération.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="labo-item">
+                        <div class="labo-dot"></div>
+                        <div class="labo-content">
+                            <h4>Domotique basse consommation</h4>
+                            <p>Développement de systèmes économes adaptés au contexte camerounais.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="labo-item">
+                        <div class="labo-dot"></div>
+                        <div class="labo-content">
+                            <h4>Formation cybersécurité</h4>
+                            <p>Programme de formation en préparation pour les entreprises locales.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="labo-item">
+                        <div class="labo-dot"></div>
+                        <div class="labo-content">
+                            <h4>Réseaux longue distance</h4>
+                            <p>Test de solutions pour interconnecter des sites distants sans fibre.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="labo-image">
+                        <img src="https://images.unsplash.com/photo-1581092921461-39b21f7d5b5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Laboratoire KDigit" class="img-fluid rounded-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION CHIFFRES CLÉS (BINAIRE)              -->
+    <!-- ============================================ -->
+    <section class="chiffres-section py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">KDigit en <span class="text-orange">chiffres</span></h2>
+                <p class="section-subtitle">Des données qui parlent d'elles-mêmes</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-3 col-6 mb-4" data-aos="zoom-in">
+                    <div class="chiffre-card">
+                        <div class="chiffre-binaire" id="binaire1">10100101</div>
+                        <div class="chiffre-final" id="chiffre1">127</div>
+                        <p>Projets réalisés</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 col-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="chiffre-card">
+                        <div class="chiffre-binaire" id="binaire2">11010010</div>
+                        <div class="chiffre-final" id="chiffre2">45</div>
+                        <p>Systèmes installés</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 col-6 mb-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="chiffre-card">
+                        <div class="chiffre-binaire" id="binaire3">10010110</div>
+                        <div class="chiffre-final" id="chiffre3">156</div>
+                        <p>Véhicules équipés GPS</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 col-6 mb-4" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="chiffre-card">
+                        <div class="chiffre-binaire" id="binaire4">11101001</div>
+                        <div class="chiffre-final" id="chiffre4">89</div>
+                        <p>Clients satisfaits</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION FRISE INNOVATION                      -->
+    <!-- ============================================ -->
+    <section class="frise-section py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Notre <span class="text-orange">évolution</span></h2>
+                <p class="section-subtitle">L'histoire des technologies que nous maîtrisons</p>
+            </div>
+            
+            <div class="frise-container">
+                <div class="frise-item" data-aos="fade-right">
+                    <div class="frise-date">2000</div>
+                    <div class="frise-content">
+                        <h4>Réseaux filaires</h4>
+                        <p>Installation de réseaux Ethernet, câblage structuré</p>
+                    </div>
+                </div>
+                
+                <div class="frise-item" data-aos="fade-left">
+                    <div class="frise-date">2010</div>
+                    <div class="frise-content">
+                        <h4>WiFi et mobilité</h4>
+                        <p>Déploiement de réseaux sans fil professionnels</p>
+                    </div>
+                </div>
+                
+                <div class="frise-item" data-aos="fade-right">
+                    <div class="frise-date">2015</div>
+                    <div class="frise-content">
+                        <h4>Fibre optique</h4>
+                        <p>Montée en débit, interconnexion haut débit</p>
+                    </div>
+                </div>
+                
+                <div class="frise-item" data-aos="fade-left">
+                    <div class="frise-date">2020</div>
+                    <div class="frise-content">
+                        <h4>Domotique</h4>
+                        <p>Automatisation des bâtiments, contrôle à distance</p>
+                    </div>
+                </div>
+                
+                <div class="frise-item" data-aos="fade-right">
+                    <div class="frise-date">2025</div>
+                    <div class="frise-content">
+                        <h4>Intelligence Artificielle</h4>
+                        <p>Reconnaissance faciale, analyse prédictive, sécurité intelligente</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION À PROPOS                              -->
+    <!-- ============================================ -->
+    <section id="a-propos" class="about-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="section-title text-start">À propos de <span class="text-orange">KDigit</span></h2>
+                    <p class="about-text">
+                        <strong>KDigit</strong> est une marque technologique basée au Cameroun spécialisée dans l'intégration de solutions numériques de pointe et la fourniture d'équipements réseau professionnels. Nous accompagnons entreprises et particuliers dans la conception, le déploiement et la maintenance d'infrastructures technologiques critiques.
+                    </p>
+                    
+                    <div class="mission-vision mt-4">
+                        <div class="mission-item">
+                            <i class="fas fa-bullseye text-orange"></i>
+                            <div>
+                                <h4>Notre Mission</h4>
+                                <p>Simplifier la technologie pour booster la performance de nos clients.</p>
+                            </div>
+                        </div>
+                        <div class="mission-item">
+                            <i class="fas fa-eye text-orange"></i>
+                            <div>
+                                <h4>Notre Vision</h4>
+                                <p>Devenir le leader camerounais des infrastructures technologiques intelligentes.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="values mt-4">
+                        <h4>Nos Valeurs</h4>
+                        <div class="values-grid">
+                            <span class="value-tag">Expertise</span>
+                            <span class="value-tag">Intégrité</span>
+                            <span class="value-tag">Réactivité</span>
+                            <span class="value-tag">Innovation locale</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Équipe KDigit" class="img-fluid rounded-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION CONTACT AVEC FORMULAIRE INTELLIGENT   -->
+    <!-- ============================================ -->
+    <section id="contact" class="contact-section py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Contactez-<span class="text-orange">nous</span></h2>
+                <p class="section-subtitle">Demandez un devis ou commandez du matériel</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-8 mx-auto" data-aos="fade-up">
+                    <form name="contact" method="POST" netlify data-netlify="true" class="contact-form" id="smartForm">
+                        <input type="hidden" name="form-name" value="contact">
+                        
+                        <!-- Champs communs -->
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <label for="nom" class="form-label">Nom complet *</label>
+                                <input type="text" class="form-control" id="nom" name="nom" required>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <label for="ville" class="form-label">Ville *</label>
+                                <input type="text" class="form-control" id="ville" name="ville" required>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <label for="pays" class="form-label">Pays *</label>
+                                <select class="form-select" id="pays" name="pays" required>
+                                    <option value="" disabled selected>-- Sélectionnez votre pays --</option>
+                                    <option value="Cameroun" selected>Cameroun</option>
+                                    <option value="France">France</option>
+                                    <option value="Canada">Canada</option>
+                                    <!-- Ajouter tous les pays ici -->
+                                </select>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <label for="telephone" class="form-label">Téléphone (WhatsApp) *</label>
+                                <input type="tel" class="form-control" id="telephone" name="telephone" placeholder="6XXXXXXXX" required>
+                            </div>
+                            
+                            <div class="col-md-12">
+                                <label for="email" class="form-label">Email *</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            
+                            <!-- Type de demande -->
+                            <div class="col-12">
+                                <label class="form-label">Type de demande *</label>
+                                <div class="demande-type">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="type_demande" id="typeDevis" value="devis" checked>
+                                        <label class="form-check-label" for="typeDevis">Demande de devis (service)</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="type_demande" id="typeAchat" value="achat">
+                                        <label class="form-check-label" for="typeAchat">Achat de matériel</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Champs pour DEVIS (affichés par défaut) -->
+                            <div class="col-12" id="devisFields">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label for="service" class="form-label">Service concerné *</label>
+                                        <select class="form-select" id="service" name="service">
+                                            <option value="" disabled selected>-- Choisissez un service --</option>
+                                            <option value="Reseaux">Réseaux intelligents</option>
+                                            <option value="Securite">Sécurité bâtiments</option>
+                                            <option value="GPS">Alarmes GPS</option>
+                                            <option value="Automatisation">Automatisation</option>
+                                            <option value="Hardware">Hardware & Software</option>
+                                            <option value="Consulting">Consulting</option>
+                                            <option value="Formation">Formation</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="description" class="form-label">Description du besoin</label>
+                                        <input type="text" class="form-control" id="description" name="description" placeholder="Décrivez brièvement votre projet">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Champs pour ACHAT (cachés par défaut) -->
+                            <div class="col-12" id="achatFields" style="display: none;">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label for="categorie" class="form-label">Catégorie *</label>
+                                        <select class="form-select" id="categorie" name="categorie">
+                                            <option value="" disabled selected>-- Catégorie --</option>
+                                            <option value="switches">Switches & Routeurs</option>
+                                            <option value="wifi">Bornes WiFi</option>
+                                            <option value="cables">Câbles & Connectiques</option>
+                                            <option value="cameras">Caméras & Sécurité</option>
+                                            <option value="accessoires">Accessoires</option>
+                                            <option value="gps">GPS & Tracking</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="produit" class="form-label">Produit souhaité *</label>
+                                        <input type="text" class="form-control" id="produit" name="produit" placeholder="Ex: Switch Cisco 2960">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="quantite" class="form-label">Quantité</label>
+                                        <input type="number" class="form-control" id="quantite" name="quantite" min="1" value="1">
+                                    </div>
+                                    <div class="col-12 mt-3">
+                                        <label for="precisions" class="form-label">Précisions complémentaires</label>
+                                        <textarea class="form-control" id="precisions" name="precisions" rows="2"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Message pour les deux -->
+                            <div class="col-12">
+                                <label for="message" class="form-label">Message (optionnel)</label>
+                                <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+                            </div>
+                            
+                            <div class="col-12 text-center">
+                                <button type="submit" class="btn btn-orange btn-lg px-5">
+                                    <i class="fas fa-paper-plane me-2"></i>Envoyer
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Coordonnées -->
+            <div class="row mt-5">
+                <div class="col-md-4 text-center" data-aos="fade-up">
+                    <div class="contact-info-card">
+                        <i class="fas fa-phone-alt text-orange"></i>
+                        <h4>WhatsApp</h4>
+                        <p><a href="https://wa.me/237693404172">+237 693 404 172</a></p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-info-card">
+                        <i class="fas fa-envelope text-orange"></i>
+                        <h4>Email</h4>
+                        <p>contact@kdigit.cm</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="contact-info-card">
+                        <i class="fas fa-map-marker-alt text-orange"></i>
+                        <h4>Localisation</h4>
+                        <p>Douala, Cameroun</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                        -->
+    <!-- ============================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="footer-logo">
+                        <span class="logo-text">K<span>Digit</span></span>
+                    </div>
+                    <p>Solutions IT & Sécurité Intelligente au Cameroun. Intégrateur de solutions numériques et fournisseur d'équipements réseau.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/intelligenceartificiell/about/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/237693404172" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Liens</h5>
+                    <ul class="footer-links">
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#equipements">Équipements</a></li>
+                        <li><a href="#labo">Laboratoire</a></li>
+                        <li><a href="#a-propos">À propos</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Services</h5>
+                    <ul class="footer-links">
+                        <li><a href="#services">Réseaux intelligents</a></li>
+                        <li><a href="#services">Sécurité bâtiments</a></li>
+                        <li><a href="#services">Alarmes GPS</a></li>
+                        <li><a href="#services">Automatisation</a></li>
+                        <li><a href="#services">Hardware & Software</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h5>Contact</h5>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone-alt"></i> +237 693 404 172</li>
+                        <li><i class="fas fa-envelope"></i> contact@kdigit.cm</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Douala, Cameroun</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2025 KDigit - Tous droits réservés. Réalisé par [Ton Nom] - Stage à Wide Solution Integrator Ltd</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
