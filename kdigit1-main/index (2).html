@@ -1,0 +1,1955 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ========== SEO ========== -->
+    <title>KDigit - Réseaux, Sécurité & Équipements IT au Cameroun | Douala</title>
+    <meta name="description" content="KDigit : intégrateur de solutions numériques et vente d'équipements réseau au Cameroun. Vidéosurveillance, fibre optique, WiFi, contrôle d'accès, alarmes GPS, téléphonie IP à Douala. Devis gratuit.">
+    <meta name="keywords" content="KDigit, réseaux Douala, sécurité Cameroun, caméras surveillance Douala, fibre optique Cameroun, domotique Douala, alarmes GPS voiture, équipements réseau Cameroun, switch Cisco Douala, installation réseau Cameroun, Wide Solution Integrator, Hikvision Cameroun, vidéosurveillance Douala">
+    <meta name="author" content="KDigit - Wide Solution Integrator Ltd">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="French">
+    <meta name="geo.region" content="CM-LT">
+    <meta name="geo.placename" content="Douala, Cameroun">
+    <link rel="canonical" href="https://kdigit.netlify.app/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kdigit.netlify.app/">
+    <meta property="og:title" content="KDigit - Solutions IT & Sécurité Intelligente au Cameroun">
+    <meta property="og:description" content="Intégrateur de réseaux, sécurité, alarmes GPS et équipements réseau professionnels à Douala, Cameroun. +237 693 404 172">
+    <meta property="og:image" content="images/technicien-baie.jpg">
+    <meta property="og:locale" content="fr_CM">
+    <meta property="og:site_name" content="KDigit">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="KDigit - Solutions IT & Sécurité au Cameroun">
+    <meta name="twitter:description" content="Réseaux, sécurité, alarmes GPS, équipements réseau à Douala. Devis gratuit.">
+    <meta name="twitter:image" content="images/technicien-baie.jpg">
+
+    <!-- Schema.org LocalBusiness -->
+    <script type="application/ld+json">
+    {
+        "@context":"https://schema.org",
+        "@type":"LocalBusiness",
+        "name":"KDigit",
+        "description":"Intégrateur de solutions numériques et fournisseur d'équipements réseau au Cameroun",
+        "url":"https://kdigit.netlify.app",
+        "telephone":"+237693404172",
+        "address":{
+            "@type":"PostalAddress",
+            "streetAddress":"Batibois",
+            "addressLocality":"Douala",
+            "addressCountry":"CM"
+        },
+        "sameAs":[
+            "https://www.facebook.com/intelligenceartificiell/about/"
+        ],
+        "geo":{"@type":"GeoCoordinates","latitude":"4.0511","longitude":"9.7679"},
+        "openingHours":"Mo-Fr 08:00-18:00, Sa 09:00-14:00",
+        "priceRange":"$$"
+    }
+    </script>
+
+    <!-- FONTS & LIBS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="style-new.css">
+
+    <!-- Preload hero image -->
+    <link rel="preload" as="image" href="images/technicien-serveur.jpg">
+    <link rel="preload" as="image" href="images/logo.jpeg">
+
+    <!-- SECURITY HEADERS via meta -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+</head>
+<body>
+
+<!-- ===== BOUTON WHATSAPP FLOTTANT ===== -->
+<a href="https://wa.me/237693404172" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contacter KDigit sur WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span>693 404 172</span>
+</a>
+
+<!-- ===== RETOUR HAUT ===== -->
+<button class="back-to-top" id="backToTop" aria-label="Retour en haut de page"><i class="fas fa-chevron-up"></i></button>
+
+<!-- ===== PANIER FLOTTANT (icône) ===== -->
+<div class="cart-widget" id="cartWidget">
+    <button class="cart-btn" id="cartToggleBtn" aria-label="Ouvrir le panier">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-badge" id="cartBadge">0</span>
+    </button>
+</div>
+
+<!-- ===== PANEL PANIER ===== -->
+<div class="cart-panel" id="cartPanel" role="dialog" aria-modal="true" aria-label="Panier d'achat">
+    <div class="cart-panel-header">
+        <h5><i class="fas fa-shopping-cart me-2"></i>Mon Panier</h5>
+        <button class="cart-close-btn" id="cartCloseBtn" aria-label="Fermer le panier"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-panel-body" id="cartItems">
+        <div class="cart-empty" id="cartEmpty">
+            <i class="fas fa-box-open"></i>
+            <p>Votre panier est vide</p>
+            <small>Ajoutez des équipements depuis la section ci-dessous</small>
+        </div>
+    </div>
+    <div class="cart-panel-footer" id="cartFooter" style="display:none;">
+        <div class="cart-total">
+            <span>Articles :</span>
+            <strong id="cartCount">0</strong>
+        </div>
+        <button class="btn btn-success btn-wa-order w-100" id="cartOrderBtn">
+            <i class="fab fa-whatsapp me-2"></i>Commander via WhatsApp
+        </button>
+        <button class="btn btn-outline-secondary btn-sm w-100 mt-2" id="cartClearBtn">
+            <i class="fas fa-trash me-2"></i>Vider le panier
+        </button>
+    </div>
+</div>
+<div class="cart-overlay" id="cartOverlay"></div>
+
+<!-- ===== NAVIGATION ===== -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" role="navigation" aria-label="Navigation principale">
+    <div class="container">
+        <a class="navbar-brand" href="#accueil" aria-label="KDigit - Accueil">
+            <img src="images/logo.jpeg" width="100" height="60" alt="Logo KDigit" loading="eager">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Ouvrir le menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#accueil">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="#realisations">Réalisations</a></li>
+                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#equipements">Équipements</a></li>
+                <li class="nav-item"><a class="nav-link" href="#partenaires">Partenaires</a></li>
+                <li class="nav-item"><a class="nav-link" href="#labo">Laboratoire</a></li>
+                <li class="nav-item"><a class="nav-link" href="#a-propos">À propos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                <li class="nav-item ms-lg-3">
+                    <a href="#contact" class="btn btn-outline-orange devis-btn">Devis / Achat</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ===== SECTION ACCUEIL (HERO) ===== -->
+<section id="accueil" class="hero-section" aria-label="Section principale KDigit">
+    <div id="particles-js" aria-hidden="true"></div>
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-lg-7 col-md-12" data-aos="fade-up">
+                <div class="hero-content">
+                    <div class="typed-container">
+                        <span id="typed-text" aria-live="polite">> Connectez-vous à l'avenir</span>
+                    </div>
+                    <h1 class="hero-title">
+                        Solutions IT & Sécurité <br>
+                        <span class="text-gradient">Intelligentes au Cameroun</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        KDigit intègre des solutions numériques de pointe et fournit des équipements réseau professionnels
+                        pour sécuriser et digitaliser votre entreprise à Douala et partout au Cameroun.
+                    </p>
+                    <div class="hero-buttons mt-4">
+                        <a href="#services" class="btn btn-orange me-3">Découvrir nos services</a>
+                        <a href="#contact" class="btn btn-outline-orange">Demander un devis</a>
+                    </div>
+                    <div class="social-links mt-5">
+                        <p class="mb-2">Suivez-nous :</p>
+                        <a href="https://www.facebook.com/intelligenceartificiell/about/" target="_blank" rel="noopener noreferrer"
+                           class="social-icon" aria-label="KDigit sur Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/237693404172" target="_blank" rel="noopener noreferrer"
+                           class="social-icon" aria-label="KDigit sur WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Image hero : cachée sur mobile (< 768px), visible à partir de lg -->
+            <div class="col-lg-5 d-none d-lg-block" data-aos="fade-left" data-aos-delay="200">
+                <div class="hero-image-wrap">
+                    <img src="images/technicien-serveur.jpg"
+                         alt="Technicien KDigit configurant des serveurs réseau à Douala Cameroun"
+                         class="hero-img" loading="eager" width="480" height="560">
+                    <div class="hero-img-badge">
+                        <span class="badge-num">127+</span>
+                        <span class="badge-txt">Projets réalisés</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+</section>
+
+<!-- ===== SECTION RÉALISATIONS ===== -->
+<section id="realisations" class="realisations-section py-5" aria-label="Nos réalisations clients">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="section-title">Nos <span class="text-orange">Réalisations</span></h2>
+            <p class="section-subtitle">Projets réalisés et études techniques — KDigit en action sur le terrain au Cameroun</p>
+        </div>
+
+        <!-- Stats rapides -->
+        <div class="row g-3 mb-5" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-6 col-md-3">
+                <div class="real-stat-card text-center">
+                    <div class="real-stat-icon"><i class="fas fa-building"></i></div>
+                    <div class="real-stat-num">6</div>
+                    <div class="real-stat-label">Clients référencés</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="real-stat-card text-center">
+                    <div class="real-stat-icon"><i class="fas fa-camera"></i></div>
+                    <div class="real-stat-num">170+</div>
+                    <div class="real-stat-label">Caméras déployées</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="real-stat-card text-center">
+                    <div class="real-stat-icon"><i class="fas fa-network-wired"></i></div>
+                    <div class="real-stat-num">5</div>
+                    <div class="real-stat-label">Secteurs couverts</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="real-stat-card text-center">
+                    <div class="real-stat-icon"><i class="fas fa-star"></i></div>
+                    <div class="real-stat-num">100%</div>
+                    <div class="real-stat-label">Satisfaction client</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Accordion Projets -->
+        <div class="accordion realisations-accordion" id="accordionRealisations">
+
+            <!-- PROJET 1 : Hôtel Saint Joseph -->
+            <div class="accordion-item project-card" data-aos="fade-up">
+                <h2 class="accordion-header" id="headingProj1">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#proj1" aria-expanded="true" aria-controls="proj1">
+                        <div class="proj-header-inner">
+                            <span class="proj-number">01</span>
+                            <div class="proj-title-wrap">
+                                <span class="proj-name">Hôtel Saint Joseph</span>
+                                <div class="proj-tags-inline">
+                                    <span class="badge badge-proj">66 Caméras</span>
+                                    <span class="badge badge-proj">Alarme incendie</span>
+                                    <span class="badge badge-proj">Téléphonie IP</span>
+                                    <span class="badge badge-proj-alt">LAN + WiFi</span>
+                                    <span class="badge badge-proj-alt">Électricité</span>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                </h2>
+                <div id="proj1" class="accordion-collapse collapse show"
+                    aria-labelledby="headingProj1" data-bs-parent="#accordionRealisations">
+                    <div class="accordion-body project-body">
+                        <div class="row g-4">
+                            <div class="col-lg-5">
+                                <div class="project-services-box">
+                                    <h5 class="proj-services-title"><i class="fas fa-clipboard-check text-orange me-2"></i>Prestations réalisées</h5>
+                                    <ul class="project-services-list">
+                                        <li><i class="fas fa-camera text-orange"></i>Déploiement vidéosurveillance — <strong>66 caméras</strong> avec archivage numérique</li>
+                                        <li><i class="fas fa-fire-extinguisher text-orange"></i>Système d'alarme anti-incendie</li>
+                                        <li><i class="fas fa-phone-volume text-orange"></i>Système de téléphonie IP et analogique (hybride)</li>
+                                        <li><i class="fas fa-fingerprint text-orange"></i>Gestion du temps de présence — contrôle d'accès biométrique</li>
+                                        <li><i class="fas fa-wifi text-orange"></i>Mise en place du LAN + WiFi avec roaming</li>
+                                        <li><i class="fas fa-bolt text-orange"></i>Réalisation de l'électricité du bâtiment</li>
+                                        <li><i class="fas fa-leaf text-orange"></i>Économiseur d'énergie</li>
+                                    </ul>
+                                    <div class="proj-sector-badge"><i class="fas fa-hotel me-2"></i>Secteur : Hôtellerie</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <h6 class="proj-gallery-title"><i class="fas fa-images text-orange me-2"></i>Galerie chantier</h6>
+                                <div class="proj-gallery-grid">
+                                    <div class="proj-gal-item" onclick="openProjLb('images/baie-hikvision.jpg','Hôtel Saint Joseph — Baie réseau')">
+                                        <img src="images/baie-hikvision.jpg" alt="Baie réseau Hikvision" loading="lazy">
+                                        <div class="proj-gal-overlay"><i class="fas fa-expand"></i><span>Baie réseau</span></div>
+                                    </div>
+                                    <div class="proj-gal-item" onclick="openProjLb('images/installation-alarme-1.jpg','Alarme incendie')">
+                                        <img src="images/installation-alarme-1.jpg" alt="Alarme incendie" loading="lazy">
+                                        <div class="proj-gal-overlay"><i class="fas fa-expand"></i><span>Alarme incendie</span></div>
+                                    </div>
+                                    <div class="proj-gal-item" onclick="openProjLb('images/cables-rj45.jpg','Câblage LAN')">
+                                        <img src="images/cables-rj45.jpg" alt="Câbles RJ45 LAN" loading="lazy">
+                                        <div class="proj-gal-overlay"><i class="fas fa-expand"></i><span>LAN / WiFi</span></div>
+                                    </div>
+                                    <div class="proj-gal-item" onclick="openProjLb('images/controle-acces.jpg','Contrôle accès biométrique')">
+                                        <img src="images/controle-acces.jpg" alt="Contrôle accès biométrique" loading="lazy">
+                                        <div class="proj-gal-overlay"><i class="fas fa-expand"></i><span>Contrôle d'accès</span></div>
+                                    </div>
+                                    <div class="proj-gal-item" onclick="openProjLb('images/centrale-alarme.jpg','Centrale alarme')">
+                                        <img src="images/centrale-alarme.jpg" alt="Centrale alarme" loading="lazy">
+                                        <div class="proj-gal-overlay"><i class="fas fa-expand"></i><span>Centrale</span></div>
+                                    </div>
+                                    <div class="proj-gal-item proj-gal-video" onclick="openProjVideo('images/video-1.mp4')">
+                                        <img src="images/baie-hikvision.jpg" alt="Vidéo chantier" loading="lazy">
+                                        <div class="proj-gal-overlay video-overlay"><i class="fas fa-play-circle"></i><span>Vidéo chantier</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJET 2 : People Stuff Technologie -->
+            <div class="accordion-item project-card" data-aos="fade-up" data-aos-delay="50">
+                <h2 class="accordion-header" id="headingProj2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#proj2" aria-expanded="false" aria-controls="proj2">
+                        <div class="proj-header-inner">
+                            <span class="proj-number">02</span>
+                            <div class="proj-title-wrap">
+                                <span class="proj-name">People Stuff Technologie</span>
+                                <div class="proj-tags-inline">
+                                    <span class="badge badge-proj">66 Caméras</span>
+                                    <span class="badge badge-proj">Alarme incendie</span>
+                                    <span class="badge badge-proj">Téléphonie IP</span>
+                                    <span class="badge badge-proj-alt">LAN + WiFi</span>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                </h2>
+                <div id="proj2" class="accordion-collapse collapse" aria-labelledby="headingProj2" data-bs-parent="#accordionRealisations">
+                    <div class="accordion-body project-body">
+                        <div class="row g-4">
+                            <div class="col-lg-5">
+                                <div class="project-services-box">
+                                    <h5 class="proj-services-title"><i class="fas fa-clipboard-check text-orange me-2"></i>Prestations réalisées</h5>
+                                    <ul class="project-services-list">
+                                        <li><i class="fas fa-camera text-orange"></i>Déploiement vidéosurveillance — <strong>66 caméras</strong> avec archivage numérique</li>
+                                        <li><i class="fas fa-fire-extinguisher text-orange"></i>Système d'alarme anti-incendie</li>
+                                        <li><i class="fas fa-fingerprint text-orange"></i>Gestion du temps de présence — contrôle d'accès biométrique</li>
+                                        <li><i class="fas fa-wifi text-orange"></i>Mise en place du LAN + WiFi avec roaming</li>
+                                        <li><i class="fas fa-phone text-orange"></i>Déploiement de la téléphonie IP</li>
+                                        <li><i class="fas fa-leaf text-orange"></i>Économiseur d'énergie</li>
+                                    </ul>
+                                    <div class="proj-sector-badge"><i class="fas fa-laptop-code me-2"></i>Secteur : Technologie & Entreprise</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <h6 class="proj-gallery-title"><i class="fas fa-images text-orange me-2"></i>Galerie chantier</h6>
+                                <div class="proj-gallery-grid">
+                                    <div class="proj-gal-item" onclick="openProjLb('images/technicien-baie.jpg','Ingénieur réseau')">
+                                        <img src="images/technicien-baie.jpg" alt="Ingénieur réseau" loading="lazy">
+                                        <div class="proj-gal-overlay"><i class="fas fa-expand"></i><span>Installation</span></div>
+                                    </div>
+                                    <div class="proj-gal-item" onclick="openProjLb('images/switches.jpg','Switches réseau')">
+                                        <img src="images/switches.jpg" alt="Switches réseau" loading="lazy">
+                                        <div class="proj-gal-overlay"><i class="fas fa-expand"></i><span>Switches</span></div>
+                                    </div>
+                                    <div class="proj-gal-item" onclick="openProjLb('images/patch-panel.jpg','Patch panel')">
+                                        <img src="images/patch-panel.jpg" alt="Patch panel" loading="lazy">
+                                        <div class="proj-gal-overlay"><i class="fas fa-expand"></i><span>Patch panel</span></div>
+                                    </div>
+                                    <div class="proj-gal-item proj-gal-video" onclick="openProjVideo('images/video-2.mp4')">
+                                        <img src="images/centrale-alarme.jpg" alt="Vidéo" loading="lazy">
+                                        <div class="proj-gal-overlay video-overlay"><i class="fas fa-play-circle"></i><span>Vidéo chantier</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJET 3 : HYSACAM -->
+            <div class="accordion-item project-card" data-aos="fade-up" data-aos-delay="100">
+                <h2 class="accordion-header" id="headingProj3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#proj3" aria-expanded="false" aria-controls="proj3">
+                        <div class="proj-header-inner">
+                            <span class="proj-number">03</span>
+                            <div class="proj-title-wrap">
+                                <span class="proj-name">HYSACAM</span>
+                                <div class="proj-tags-inline">
+                                    <span class="badge badge-proj">38 Caméras</span>
+                                    <span class="badge badge-proj-alt">Vidéosurveillance</span>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                </h2>
+                <div id="proj3" class="accordion-collapse collapse" aria-labelledby="headingProj3" data-bs-parent="#accordionRealisations">
+                    <div class="accordion-body project-body">
+                        <div class="row g-4">
+                            <div class="col-lg-5">
+                                <div class="project-services-box">
+                                    <h5 class="proj-services-title"><i class="fas fa-clipboard-check text-orange me-2"></i>Prestations réalisées</h5>
+                                    <ul class="project-services-list">
+                                        <li><i class="fas fa-camera text-orange"></i>Déploiement et configuration vidéosurveillance — <strong>38 caméras</strong></li>
+                                        <li><i class="fas fa-server text-orange"></i>Configuration NVR et archivage numérique</li>
+                                        <li><i class="fas fa-cogs text-orange"></i>Paramétrage et mise en service complète</li>
+                                        <li><i class="fas fa-check-circle text-orange"></i>Tests et validation du système</li>
+                                    </ul>
+                                    <div class="proj-sector-badge"><i class="fas fa-recycle me-2"></i>Secteur : Services publics</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="study-visual">
+                                    <div class="study-icon-grid">
+                                        <div class="study-icon-item"><i class="fas fa-camera"></i><span>38 caméras</span></div>
+                                        <div class="study-icon-item"><i class="fas fa-server"></i><span>NVR</span></div>
+                                        <div class="study-icon-item"><i class="fas fa-hdd"></i><span>Archivage</span></div>
+                                        <div class="study-icon-item"><i class="fas fa-check-circle"></i><span>Validation</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJET 4 : ASQUINI -->
+            <div class="accordion-item project-card" data-aos="fade-up" data-aos-delay="150">
+                <h2 class="accordion-header" id="headingProj4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#proj4" aria-expanded="false" aria-controls="proj4">
+                        <div class="proj-header-inner">
+                            <span class="proj-number">04</span>
+                            <div class="proj-title-wrap">
+                                <span class="proj-name">ASQUINI</span>
+                                <div class="proj-tags-inline">
+                                    <span class="badge badge-study"><i class="fas fa-drafting-compass me-1"></i>Étude technique</span>
+                                    <span class="badge badge-proj">Vidéosurveillance</span>
+                                    <span class="badge badge-proj">Contrôle de ronde</span>
+                                    <span class="badge badge-proj-alt">Anti-intrusion</span>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                </h2>
+                <div id="proj4" class="accordion-collapse collapse" aria-labelledby="headingProj4" data-bs-parent="#accordionRealisations">
+                    <div class="accordion-body project-body">
+                        <div class="row g-4">
+                            <div class="col-lg-5">
+                                <div class="project-services-box">
+                                    <h5 class="proj-services-title"><i class="fas fa-drafting-compass text-orange me-2"></i>Étude technique réalisée</h5>
+                                    <ul class="project-services-list">
+                                        <li><i class="fas fa-search text-orange"></i>Étude complète pour un système de vidéosurveillance</li>
+                                        <li><i class="fas fa-route text-orange"></i>Conception du système de contrôle de ronde</li>
+                                        <li><i class="fas fa-bell text-orange"></i>Étude du système d'alarme anti-intrusion</li>
+                                        <li><i class="fas fa-file-alt text-orange"></i>Rapport technique et cahier des charges</li>
+                                    </ul>
+                                    <div class="proj-study-note"><i class="fas fa-info-circle me-2"></i>Mission d'étude — audit et plan de déploiement complet.</div>
+                                    <div class="proj-sector-badge"><i class="fas fa-industry me-2"></i>Secteur : Industrie</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="study-visual">
+                                    <div class="study-icon-grid">
+                                        <div class="study-icon-item"><i class="fas fa-camera"></i><span>Vidéosurveillance</span></div>
+                                        <div class="study-icon-item"><i class="fas fa-route"></i><span>Contrôle de ronde</span></div>
+                                        <div class="study-icon-item"><i class="fas fa-bell"></i><span>Anti-intrusion</span></div>
+                                        <div class="study-icon-item"><i class="fas fa-file-alt"></i><span>Cahier des charges</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJET 5 : SECA -->
+            <div class="accordion-item project-card" data-aos="fade-up" data-aos-delay="200">
+                <h2 class="accordion-header" id="headingProj5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#proj5" aria-expanded="false" aria-controls="proj5">
+                        <div class="proj-header-inner">
+                            <span class="proj-number">05</span>
+                            <div class="proj-title-wrap">
+                                <span class="proj-name">SECA</span>
+                                <div class="proj-tags-inline">
+                                    <span class="badge badge-study"><i class="fas fa-drafting-compass me-1"></i>Étude technique</span>
+                                    <span class="badge badge-proj">Interconnexion</span>
+                                    <span class="badge badge-proj">Vidéosurveillance</span>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                </h2>
+                <div id="proj5" class="accordion-collapse collapse" aria-labelledby="headingProj5" data-bs-parent="#accordionRealisations">
+                    <div class="accordion-body project-body">
+                        <div class="row g-4">
+                            <div class="col-lg-5">
+                                <div class="project-services-box">
+                                    <h5 class="proj-services-title"><i class="fas fa-drafting-compass text-orange me-2"></i>Étude technique réalisée</h5>
+                                    <ul class="project-services-list">
+                                        <li><i class="fas fa-link text-orange"></i>Étude pour l'interconnexion inter-sites</li>
+                                        <li><i class="fas fa-camera text-orange"></i>Étude pour le déploiement de vidéosurveillance</li>
+                                        <li><i class="fas fa-network-wired text-orange"></i>Architecture réseau multi-sites</li>
+                                        <li><i class="fas fa-file-alt text-orange"></i>Plan de déploiement et estimation budgétaire</li>
+                                    </ul>
+                                    <div class="proj-study-note"><i class="fas fa-info-circle me-2"></i>Analyse des besoins et conception de l'architecture.</div>
+                                    <div class="proj-sector-badge"><i class="fas fa-building me-2"></i>Secteur : Entreprise</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="study-visual">
+                                    <div class="study-icon-grid">
+                                        <div class="study-icon-item"><i class="fas fa-link"></i><span>Interconnexion</span></div>
+                                        <div class="study-icon-item"><i class="fas fa-camera"></i><span>Vidéosurveillance</span></div>
+                                        <div class="study-icon-item"><i class="fas fa-server"></i><span>Architecture</span></div>
+                                        <div class="study-icon-item"><i class="fas fa-coins"></i><span>Budget</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJET 6 : Peace Residences -->
+            <div class="accordion-item project-card" data-aos="fade-up" data-aos-delay="250">
+                <h2 class="accordion-header" id="headingProj6">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#proj6" aria-expanded="false" aria-controls="proj6">
+                        <div class="proj-header-inner">
+                            <span class="proj-number">06</span>
+                            <div class="proj-title-wrap">
+                                <span class="proj-name">Peace Residences &amp; Resorts</span>
+                                <div class="proj-tags-inline">
+                                    <span class="badge badge-study"><i class="fas fa-drafting-compass me-1"></i>Étude technique</span>
+                                    <span class="badge badge-proj">Vidéosurveillance</span>
+                                    <span class="badge badge-proj">Alarme incendie</span>
+                                    <span class="badge badge-proj">Sonorisation</span>
+                                    <span class="badge badge-proj-alt">LAN + TV</span>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                </h2>
+                <div id="proj6" class="accordion-collapse collapse" aria-labelledby="headingProj6" data-bs-parent="#accordionRealisations">
+                    <div class="accordion-body project-body">
+                        <div class="row g-4">
+                            <div class="col-lg-5">
+                                <div class="project-services-box">
+                                    <h5 class="proj-services-title"><i class="fas fa-drafting-compass text-orange me-2"></i>Étude technique réalisée</h5>
+                                    <ul class="project-services-list">
+                                        <li><i class="fas fa-camera text-orange"></i>Étude pour le déploiement de vidéosurveillance</li>
+                                        <li><i class="fas fa-fire-extinguisher text-orange"></i>Système d'alarme anti-incendie</li>
+                                        <li><i class="fas fa-volume-up text-orange"></i>Sonorisation &amp; medical emergency call</li>
+                                        <li><i class="fas fa-network-wired text-orange"></i>LAN production</li>
+                                        <li><i class="fas fa-tv text-orange"></i>Numérisation des chaînes TV</li>
+                                    </ul>
+                                    <div class="proj-study-note"><i class="fas fa-info-circle me-2"></i>Mission d'étude globale pour complexe hôtelier haut de gamme.</div>
+                                    <div class="proj-sector-badge"><i class="fas fa-umbrella-beach me-2"></i>Secteur : Hôtellerie de luxe</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="study-visual">
+                                    <div class="study-icon-grid">
+                                        <div class="study-icon-item"><i class="fas fa-camera"></i><span>Surveillance</span></div>
+                                        <div class="study-icon-item"><i class="fas fa-fire-extinguisher"></i><span>Incendie</span></div>
+                                        <div class="study-icon-item"><i class="fas fa-volume-up"></i><span>Sonorisation</span></div>
+                                        <div class="study-icon-item"><i class="fas fa-tv"></i><span>TV numérique</span></div>
+                                        <div class="study-icon-item"><i class="fas fa-network-wired"></i><span>LAN</span></div>
+                                        <div class="study-icon-item"><i class="fas fa-ambulance"></i><span>Emergency Call</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- /accordion -->
+
+        <!-- Galerie photos terrain -->
+        <div class="mt-5" data-aos="fade-up">
+            <h4 class="text-center text-white mb-4">Photos &amp; Vidéos — <span class="text-orange">Nos Chantiers</span></h4>
+            <div class="gallery-grid">
+                <div class="gallery-item gallery-tall" data-index="0" role="button" tabindex="0" aria-label="Agrandir photo baie réseau"><img src="images/baie-hikvision.jpg" alt="Baie réseau complète Hikvision" loading="lazy"><div class="gallery-overlay"><span class="gal-tag">Baie réseau complète</span></div></div>
+                <div class="gallery-item" data-index="1" role="button" tabindex="0"><img src="images/technicien-baie.jpg" alt="Ingénieur réseau KDigit" loading="lazy"><div class="gallery-overlay"><span class="gal-tag">Ingénieur réseau</span></div></div>
+                <div class="gallery-item" data-index="2" role="button" tabindex="0"><img src="images/installation-alarme-1.jpg" alt="Installation alarme incendie" loading="lazy"><div class="gallery-overlay"><span class="gal-tag">Alarme incendie</span></div></div>
+                <div class="gallery-item" data-index="3" role="button" tabindex="0"><img src="images/cables-rj45.jpg" alt="Câbles RJ45 réseau" loading="lazy"><div class="gallery-overlay"><span class="gal-tag">Câblage RJ45</span></div></div>
+                <div class="gallery-item gallery-wide" data-index="4" role="button" tabindex="0"><img src="images/centrale-alarme.jpg" alt="Centrale alarme sécurité" loading="lazy"><div class="gallery-overlay"><span class="gal-tag">Sécurité & réseau</span></div></div>
+                <div class="gallery-item" data-index="5" role="button" tabindex="0"><img src="images/switches.jpg" alt="Switches rack réseau" loading="lazy"><div class="gallery-overlay"><span class="gal-tag">Switches rack</span></div></div>
+                <div class="gallery-item" data-index="6" role="button" tabindex="0"><img src="images/installation-reseau-1.jpg" alt="Installation réseau câblage" loading="lazy"><div class="gallery-overlay"><span class="gal-tag">Câblage réseau</span></div></div>
+                <div class="gallery-item" data-index="7" role="button" tabindex="0"><img src="images/installation-alarme-2.jpg" alt="Alarme sécurité installation" loading="lazy"><div class="gallery-overlay"><span class="gal-tag">Alarme sécurité</span></div></div>
+                <div class="gallery-item" data-index="8" role="button" tabindex="0"><img src="images/patch-panel.jpg" alt="Patch panel brassage" loading="lazy"><div class="gallery-overlay"><span class="gal-tag">Patch panel</span></div></div>
+                <div class="gallery-item" data-index="9" role="button" tabindex="0"><img src="images/cablage-baie.jpg" alt="Câblage baie serveur" loading="lazy"><div class="gallery-overlay"><span class="gal-tag">Câblage en cours</span></div></div>
+                <div class="gallery-item" data-index="10" role="button" tabindex="0"><img src="images/wifi-exterieur.jpg" alt="WiFi extérieur installation" loading="lazy"><div class="gallery-overlay"><span class="gal-tag">WiFi extérieur</span></div></div>
+                <div class="gallery-item" data-index="11" role="button" tabindex="0"><img src="images/controle-acces.jpg" alt="Contrôle accès biométrique" loading="lazy"><div class="gallery-overlay"><span class="gal-tag">Contrôle d'accès</span></div></div>
+            </div>
+            <div class="row g-4 mt-3">
+                <div class="col-md-6">
+                    <div class="video-card">
+                        <video controls preload="none" poster="images/baie-hikvision.jpg" aria-label="Vidéo chantier installation réseau KDigit">
+                            <source src="images/video-1.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-caption"><i class="fas fa-play-circle text-orange me-2"></i>Chantier installation réseau — Douala</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="video-card">
+                        <video controls preload="none" poster="images/centrale-alarme.jpg" aria-label="Vidéo chantier sécurité alarme KDigit">
+                            <source src="images/video-2.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-caption"><i class="fas fa-play-circle text-orange me-2"></i>Chantier sécurité & alarme — Cameroun</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section id="services" class="services-section py-5" aria-label="Nos services KDigit">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="section-title">Nos <span class="text-orange">Services</span></h2>
+            <p class="section-subtitle">7 domaines d'expertise pour couvrir tous vos besoins numériques au Cameroun</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-card">
+                    <div class="service-img-wrap"><img src="images/baie-hikvision.jpg" alt="Réseaux LAN WAN Douala" loading="lazy" width="400" height="180"></div>
+                    <div class="service-icon"><i class="fas fa-network-wired"></i></div>
+                    <h3>Réseaux intelligents & transfert de données</h3>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check-circle"></i> Infrastructure LAN/WAN sécurisée</li>
+                        <li><i class="fas fa-check-circle"></i> Transfert de données haut débit</li>
+                        <li><i class="fas fa-check-circle"></i> Interconnexion de sites</li>
+                        <li><i class="fas fa-check-circle"></i> Solutions WiFi professionnelles avec roaming</li>
+                        <li><i class="fas fa-check-circle"></i> Optimisation de bande passante</li>
+                    </ul>
+                    <div class="service-actions">
+                        <a href="#contact" class="btn-service devis-only">Demander un devis →</a>
+                        <a href="#equipements" class="btn-service">Voir équipements →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-card">
+                    <div class="service-img-wrap"><img src="images/installation-alarme-1.jpg" alt="Sécurité bâtiment alarme incendie" loading="lazy" width="400" height="180"></div>
+                    <div class="service-icon"><i class="fas fa-shield-halved"></i></div>
+                    <h3>Sécurité pour maisons & bâtiments intelligents</h3>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check-circle"></i> Contrôle d'accès biométrique</li>
+                        <li><i class="fas fa-check-circle"></i> Vidéosurveillance IP (Hikvision)</li>
+                        <li><i class="fas fa-check-circle"></i> Alarme anti-intrusion & anti-incendie</li>
+                        <li><i class="fas fa-check-circle"></i> Supervision à distance 24/7</li>
+                        <li><i class="fas fa-check-circle"></i> Gestion des temps de présence</li>
+                    </ul>
+                    <div class="service-actions">
+                        <a href="#contact" class="btn-service devis-only">Demander un devis →</a>
+                        <a href="#equipements" class="btn-service">Voir équipements →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-card">
+                    <div class="service-img-wrap"><img src="images/controle-acces.jpg" alt="Alarme GPS véhicule Cameroun" loading="lazy" width="400" height="180"></div>
+                    <div class="service-icon"><i class="fas fa-car-side"></i></div>
+                    <h3>Alarmes voitures intelligentes GSM/GPS</h3>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check-circle"></i> Alarmes GSM avec notification instantanée</li>
+                        <li><i class="fas fa-check-circle"></i> Géolocalisation GPS précise en temps réel</li>
+                        <li><i class="fas fa-check-circle"></i> Immobilisation moteur à distance</li>
+                        <li><i class="fas fa-check-circle"></i> Historique des trajets</li>
+                        <li><i class="fas fa-check-circle"></i> Idéal pour flottes de véhicules</li>
+                    </ul>
+                    <div class="service-actions">
+                        <a href="#contact" class="btn-service devis-only">Demander un devis →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-card">
+                    <div class="service-img-wrap"><img src="images/wifi-exterieur.jpg" alt="Automatisation domotique Douala" loading="lazy" width="400" height="180"></div>
+                    <div class="service-icon"><i class="fas fa-robot"></i></div>
+                    <h3>Solutions d'automatisation & domotique</h3>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check-circle"></i> Automatisation éclairage et climatisation</li>
+                        <li><i class="fas fa-check-circle"></i> Gestion technique centralisée (GTC)</li>
+                        <li><i class="fas fa-check-circle"></i> Programmation sur mesure</li>
+                        <li><i class="fas fa-check-circle"></i> Capteurs intelligents connectés</li>
+                        <li><i class="fas fa-check-circle"></i> Économies d'énergie garanties</li>
+                    </ul>
+                    <a href="#contact" class="btn-service devis-only">Demander un devis →</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-card">
+                    <div class="service-img-wrap"><img src="images/switches.jpg" alt="Solutions matérielles réseau" loading="lazy" width="400" height="180"></div>
+                    <div class="service-icon"><i class="fas fa-microchip"></i></div>
+                    <h3>Solutions matérielles & logicielles</h3>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check-circle"></i> Fourniture et installation d'équipements</li>
+                        <li><i class="fas fa-check-circle"></i> Configuration serveurs et stockage</li>
+                        <li><i class="fas fa-check-circle"></i> Déploiement de logiciels métier</li>
+                        <li><i class="fas fa-check-circle"></i> Solutions cloud hybrides</li>
+                        <li><i class="fas fa-check-circle"></i> Maintenance préventive</li>
+                    </ul>
+                    <a href="#contact" class="btn-service devis-only">Demander un devis →</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-card">
+                    <div class="service-img-wrap"><img src="images/technicien-reseau.jpg" alt="Formation IT réseau Cameroun" loading="lazy" width="400" height="180"></div>
+                    <div class="service-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <h3>Formation & Conseil IT</h3>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check-circle"></i> Formation administration réseau</li>
+                        <li><i class="fas fa-check-circle"></i> Utilisation des outils de sécurité</li>
+                        <li><i class="fas fa-check-circle"></i> Gestion des systèmes d'alarme</li>
+                        <li><i class="fas fa-check-circle"></i> Audit d'infrastructure existante</li>
+                        <li><i class="fas fa-check-circle"></i> Support post-formation inclus</li>
+                    </ul>
+                    <a href="#contact" class="btn-service devis-only">Demander un devis →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== ÉQUIPEMENTS (CATALOGUE + PANIER) ===== -->
+<section id="equipements" class="equipements-section py-5" aria-label="Catalogue équipements réseau KDigit">
+    <div class="container">
+        <div class="text-center mb-4" data-aos="fade-up">
+            <h2 class="section-title">Catalogue <span class="text-orange">Équipements</span></h2>
+            <p class="section-subtitle">Matériel professionnel disponible à Douala — ajoutez au panier et commandez via WhatsApp</p>
+        </div>
+
+        <!-- Barre filtre + panier -->
+        <div class="equip-toolbar" data-aos="fade-up" data-aos-delay="100">
+            <div class="equip-filter-btns">
+                <button class="filter-btn active" data-filter="all">Tout voir</button>
+                <button class="filter-btn" data-filter="cameras">Caméras & NVR</button>
+                <button class="filter-btn" data-filter="reseau">Réseau & Switches</button>
+                <button class="filter-btn" data-filter="wifi">WiFi & Antennes</button>
+                <button class="filter-btn" data-filter="cables">Câbles & Connectiques</button>
+                <button class="filter-btn" data-filter="alarme">Alarme & Accès</button>
+                <button class="filter-btn" data-filter="gps">GPS & Tracking</button>
+                <button class="filter-btn" data-filter="telephonie">Téléphonie IP</button>
+            </div>
+            <button class="btn btn-orange-sm open-cart-btn" id="openCartBtn">
+                <i class="fas fa-shopping-cart me-2"></i>Panier (<span id="navCartCount">0</span>)
+            </button>
+        </div>
+
+        <!-- Grille produits -->
+        <div class="row g-4 equip-grid" id="equipGrid" data-aos="fade-up" data-aos-delay="150">
+
+            <!-- 01 — Caméra dôme IP Hikvision 2MP -->
+            <div class="col-lg-3 col-md-4 col-sm-6 equip-col" data-category="cameras">
+                <div class="equip-product-card">
+                    <div class="equip-img-container">
+                        <img src="equipement/01.webp" alt="Caméra dôme IP Hikvision DS-2CD1143G2-I 4MP" loading="lazy">
+                        <span class="equip-badge badge-new">Disponible</span>
+                    </div>
+                    <div class="equip-product-body">
+                        <div class="equip-category-tag">Caméras IP Dôme</div>
+                        <h5 class="equip-product-name">Caméra Dôme IP Hikvision 4MP</h5>
+                        <p class="equip-product-desc">Caméra dôme IP 4MP AcuSense, vision nocturne IR 40m, IP67, IK10. Détection intelligente humain/véhicule.</p>
+                        <div class="equip-specs">
+                            <span><i class="fas fa-tag"></i> Hikvision</span>
+                            <span><i class="fas fa-video"></i> 4MP / IR 40m</span>
+                        </div>
+                        <div class="equip-product-footer">
+                            <span class="equip-price">Sur devis</span>
+                            <button class="btn-add-cart" data-name="Caméra Dôme IP Hikvision 4MP" data-img="equipement/01.webp" data-cat="Caméras IP Dôme" aria-label="Ajouter au panier">
+                                <i class="fas fa-cart-plus"></i> Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 02 — Caméra bullet extérieure 4MP -->
+            <div class="col-lg-3 col-md-4 col-sm-6 equip-col" data-category="cameras">
+                <div class="equip-product-card">
+                    <div class="equip-img-container">
+                        <img src="equipement/02.webp" alt="Caméra bullet extérieure Hikvision 4MP" loading="lazy">
+                        <span class="equip-badge badge-pop">Populaire</span>
+                    </div>
+                    <div class="equip-product-body">
+                        <div class="equip-category-tag">Caméras IP Bullet</div>
+                        <h5 class="equip-product-name">Caméra Bullet Extérieure 4MP</h5>
+                        <p class="equip-product-desc">Caméra bullet IP 4MP, vision nocturne IR 60m, IP67, ColorVu (couleur la nuit). Idéale façades et parkings.</p>
+                        <div class="equip-specs">
+                            <span><i class="fas fa-tag"></i> Hikvision/Dahua</span>
+                            <span><i class="fas fa-video"></i> 4MP ColorVu</span>
+                        </div>
+                        <div class="equip-product-footer">
+                            <span class="equip-price">Sur devis</span>
+                            <button class="btn-add-cart" data-name="Caméra Bullet Extérieure 4MP" data-img="equipement/02.webp" data-cat="Caméras IP Bullet" aria-label="Ajouter au panier">
+                                <i class="fas fa-cart-plus"></i> Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 03 — Caméra PTZ motorisée -->
+            <div class="col-lg-3 col-md-4 col-sm-6 equip-col" data-category="cameras">
+                <div class="equip-product-card">
+                    <div class="equip-img-container">
+                        <img src="equipement/03.webp" alt="Caméra PTZ motorisée Hikvision zoom x25" loading="lazy">
+                    </div>
+                    <div class="equip-product-body">
+                        <div class="equip-category-tag">Caméras PTZ</div>
+                        <h5 class="equip-product-name">Caméra PTZ Motorisée Zoom x25</h5>
+                        <p class="equip-product-desc">Caméra PTZ 360° 2MP, zoom optique x25, suivi automatique (Auto-Tracking), vision nocturne IR 100m.</p>
+                        <div class="equip-specs">
+                            <span><i class="fas fa-tag"></i> Hikvision</span>
+                            <span><i class="fas fa-arrows-alt"></i> PTZ 360° x25</span>
+                        </div>
+                        <div class="equip-product-footer">
+                            <span class="equip-price">Sur devis</span>
+                            <button class="btn-add-cart" data-name="Caméra PTZ Motorisée Zoom x25" data-img="equipement/03.webp" data-cat="Caméras PTZ" aria-label="Ajouter au panier">
+                                <i class="fas fa-cart-plus"></i> Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 04 — NVR 16 canaux PoE -->
+            <div class="col-lg-3 col-md-4 col-sm-6 equip-col" data-category="cameras">
+                <div class="equip-product-card">
+                    <div class="equip-img-container">
+                        <img src="equipement/04.webp" alt="Enregistreur NVR 16 canaux PoE Hikvision" loading="lazy">
+                        <span class="equip-badge badge-new">Stock</span>
+                    </div>
+                    <div class="equip-product-body">
+                        <div class="equip-category-tag">Enregistreurs NVR</div>
+                        <h5 class="equip-product-name">NVR 16 Canaux PoE — 4K</h5>
+                        <p class="equip-product-desc">Enregistreur réseau NVR 16 canaux, 16 ports PoE intégrés, sortie 4K, HDD jusqu'à 16 To, interface graphique.</p>
+                        <div class="equip-specs">
+                            <span><i class="fas fa-server"></i> 16 canaux</span>
+                            <span><i class="fas fa-hdd"></i> Max 16 To</span>
+                        </div>
+                        <div class="equip-product-footer">
+                            <span class="equip-price">Sur devis</span>
+                            <button class="btn-add-cart" data-name="NVR 16 Canaux PoE 4K" data-img="equipement/04.webp" data-cat="Enregistreurs NVR" aria-label="Ajouter au panier">
+                                <i class="fas fa-cart-plus"></i> Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 05 — Switch managé 24 ports -->
+            <div class="col-lg-3 col-md-4 col-sm-6 equip-col" data-category="reseau">
+                <div class="equip-product-card">
+                    <div class="equip-img-container">
+                        <img src="equipement/05.webp" alt="Switch managé 24 ports Gigabit PoE+" loading="lazy">
+                        <span class="equip-badge badge-pop">Pro</span>
+                    </div>
+                    <div class="equip-product-body">
+                        <div class="equip-category-tag">Switches Managés</div>
+                        <h5 class="equip-product-name">Switch Managé 24 Ports Gigabit PoE+</h5>
+                        <p class="equip-product-desc">Switch managé L2/L3, 24 ports PoE+ Gigabit, 2 ports SFP uplink, VLAN, QoS, budget PoE 370W.</p>
+                        <div class="equip-specs">
+                            <span><i class="fas fa-tag"></i> Cisco / TP-Link</span>
+                            <span><i class="fas fa-ethernet"></i> 24 ports Gbps</span>
+                        </div>
+                        <div class="equip-product-footer">
+                            <span class="equip-price">Sur devis</span>
+                            <button class="btn-add-cart" data-name="Switch Managé 24 Ports Gigabit PoE+" data-img="equipement/05.webp" data-cat="Switches Managés" aria-label="Ajouter au panier">
+                                <i class="fas fa-cart-plus"></i> Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 06 — Switch PoE 8 ports -->
+            <div class="col-lg-3 col-md-4 col-sm-6 equip-col" data-category="reseau">
+                <div class="equip-product-card">
+                    <div class="equip-img-container">
+                        <img src="equipement/06.webp" alt="Switch PoE 8 ports 100Mbps plug and play" loading="lazy">
+                    </div>
+                    <div class="equip-product-body">
+                        <div class="equip-category-tag">Switches PoE</div>
+                        <h5 class="equip-product-name">Switch PoE+ 8 Ports 100Mbps</h5>
+                        <p class="equip-product-desc">Switch non-managé 8 ports PoE+ 100Mbps + 2 uplink Gigabit, budget PoE 120W, plug and play, montage rack.</p>
+                        <div class="equip-specs">
+                            <span><i class="fas fa-tag"></i> TP-Link</span>
+                            <span><i class="fas fa-bolt"></i> PoE 120W</span>
+                        </div>
+                        <div class="equip-product-footer">
+                            <span class="equip-price">Sur devis</span>
+                            <button class="btn-add-cart" data-name="Switch PoE+ 8 Ports 100Mbps" data-img="equipement/06.webp" data-cat="Switches PoE" aria-label="Ajouter au panier">
+                                <i class="fas fa-cart-plus"></i> Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 07 — Routeur MikroTik -->
+            <div class="col-lg-3 col-md-4 col-sm-6 equip-col" data-category="reseau">
+                <div class="equip-product-card">
+                    <div class="equip-img-container">
+                        <img src="equipement/07.webp" alt="Routeur MikroTik RouterBOARD RB750Gr3" loading="lazy">
+                    </div>
+                    <div class="equip-product-body">
+                        <div class="equip-category-tag">Routeurs</div>
+                        <h5 class="equip-product-name">Routeur MikroTik RB750Gr3 hEX</h5>
+                        <p class="equip-product-desc">Routeur MikroTik RouterOS 5 ports Gigabit, firewall avancé, VPN IPsec/PPTP/L2TP, QoS, gestion de bande passante.</p>
+                        <div class="equip-specs">
+                            <span><i class="fas fa-tag"></i> MikroTik</span>
+                            <span><i class="fas fa-shield-alt"></i> RouterOS L4</span>
+                        </div>
+                        <div class="equip-product-footer">
+                            <span class="equip-price">Sur devis</span>
+                            <button class="btn-add-cart" data-name="Routeur MikroTik RB750Gr3 hEX" data-img="equipement/07.webp" data-cat="Routeurs" aria-label="Ajouter au panier">
+                                <i class="fas fa-cart-plus"></i> Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 08 — Borne WiFi UniFi -->
+            <div class="col-lg-3 col-md-4 col-sm-6 equip-col" data-category="wifi">
+                <div class="equip-product-card">
+                    <div class="equip-img-container">
+                        <img src="equipement/08.webp" alt="Borne WiFi Ubiquiti UniFi U6 Lite WiFi 6" loading="lazy">
+                        <span class="equip-badge badge-pop">WiFi 6</span>
+                    </div>
+                    <div class="equip-product-body">
+                        <div class="equip-category-tag">Bornes WiFi Indoor</div>
+                        <h5 class="equip-product-name">Borne WiFi Ubiquiti UniFi U6 Lite</h5>
+                        <p class="equip-product-desc">Point d'accès WiFi 6 (802.11ax), jusqu'à 300 clients simultanés, couverture 140m², PoE, gestion centralisée UniFi.</p>
+                        <div class="equip-specs">
+                            <span><i class="fas fa-tag"></i> Ubiquiti</span>
+                            <span><i class="fas fa-wifi"></i> WiFi 6 AX</span>
+                        </div>
+                        <div class="equip-product-footer">
+                            <span class="equip-price">Sur devis</span>
+                            <button class="btn-add-cart" data-name="Borne WiFi Ubiquiti UniFi U6 Lite" data-img="equipement/08.webp" data-cat="Bornes WiFi" aria-label="Ajouter au panier">
+                                <i class="fas fa-cart-plus"></i> Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 09 — Antenne longue portée -->
+            <div class="col-lg-3 col-md-4 col-sm-6 equip-col" data-category="wifi">
+                <div class="equip-product-card">
+                    <div class="equip-img-container">
+                        <img src="equipement/09.webp" alt="Antenne pont WiFi longue portée 5GHz MikroTik" loading="lazy">
+                    </div>
+                    <div class="equip-product-body">
+                        <div class="equip-category-tag">Ponts WiFi Longue Portée</div>
+                        <h5 class="equip-product-name">Pont WiFi 5GHz Longue Portée (10km)</h5>
+                        <p class="equip-product-desc">Pont WiFi point-à-point 5GHz, jusqu'à 10km, débit réel 300Mbps, IP67, idéal pour interconnexion de sites distants.</p>
+                        <div class="equip-specs">
+                            <span><i class="fas fa-tag"></i> MikroTik/Ubiquiti</span>
+                            <span><i class="fas fa-broadcast-tower"></i> 10km / 300Mbps</span>
+                        </div>
+                        <div class="equip-product-footer">
+                            <span class="equip-price">Sur devis</span>
+                            <button class="btn-add-cart" data-name="Pont WiFi 5GHz Longue Portée 10km" data-img="equipement/09.webp" data-cat="Antennes WiFi" aria-label="Ajouter au panier">
+                                <i class="fas fa-cart-plus"></i> Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 10 — Câble fibre optique monomode -->
+            <div class="col-lg-3 col-md-4 col-sm-6 equip-col" data-category="cables">
+                <div class="equip-product-card">
+                    <div class="equip-img-container">
+                        <img src="equipement/10.webp" alt="Câble fibre optique OS2 monomode LSZH" loading="lazy">
+                    </div>
+                    <div class="equip-product-body">
+                        <div class="equip-category-tag">Câbles Fibre Optique</div>
+                        <h5 class="equip-product-name">Câble Fibre Optique OS2 Monomode</h5>
+                        <p class="equip-product-desc">Câble fibre optique OS2 monomode 9/125µm, gaine LSZH, bobines de 100m à 2000m. Perte < 0.4dB/km.</p>
+                        <div class="equip-specs">
+                            <span><i class="fas fa-tag"></i> Nexans / Draka</span>
+                            <span><i class="fas fa-ruler"></i> 100m – 2km</span>
+                        </div>
+                        <div class="equip-product-footer">
+                            <span class="equip-price">Sur devis</span>
+                            <button class="btn-add-cart" data-name="Câble Fibre Optique OS2 Monomode" data-img="equipement/10.webp" data-cat="Câbles Fibre Optique" aria-label="Ajouter au panier">
+                                <i class="fas fa-cart-plus"></i> Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 11 — Câble RJ45 Cat6 FTP -->
+            <div class="col-lg-3 col-md-4 col-sm-6 equip-col" data-category="cables">
+                <div class="equip-product-card">
+                    <div class="equip-img-container">
+                        <img src="equipement/11.png" alt="Câble réseau RJ45 Cat6 FTP blindé 305m" loading="lazy">
+                        <span class="equip-badge badge-new">Stock</span>
+                    </div>
+                    <div class="equip-product-body">
+                        <div class="equip-category-tag">Câbles Réseau RJ45</div>
+                        <h5 class="equip-product-name">Câble RJ45 Cat6 FTP Blindé — Bobine 305m</h5>
+                        <p class="equip-product-desc">Câble réseau Cat6 FTP blindé AWG23, bobine 305m, 1000 Mbps, gaine LSZH ignifugée. Compatible PoE++.</p>
+                        <div class="equip-specs">
+                            <span><i class="fas fa-tag"></i> Nexans / Belden</span>
+                            <span><i class="fas fa-ethernet"></i> Cat6 FTP 305m</span>
+                        </div>
+                        <div class="equip-product-footer">
+                            <span class="equip-price">Sur devis</span>
+                            <button class="btn-add-cart" data-name="Câble RJ45 Cat6 FTP Blindé 305m" data-img="equipement/11.png" data-cat="Câbles RJ45" aria-label="Ajouter au panier">
+                                <i class="fas fa-cart-plus"></i> Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 12 — Centrale alarme incendie adressable -->
+            <div class="col-lg-3 col-md-4 col-sm-6 equip-col" data-category="alarme">
+                <div class="equip-product-card">
+                    <div class="equip-img-container">
+                        <img src="equipement/12.webp" alt="Centrale alarme incendie adressable EN54" loading="lazy">
+                        <span class="equip-badge badge-pop">Certifié EN54</span>
+                    </div>
+                    <div class="equip-product-body">
+                        <div class="equip-category-tag">Centrale Alarme Incendie</div>
+                        <h5 class="equip-product-name">Centrale Alarme Incendie Adressable</h5>
+                        <p class="equip-product-desc">Centrale adressable 2 boucles, gestion jusqu'à 512 détecteurs, afficheur LCD, conforme EN54. Avec module GSM.</p>
+                        <div class="equip-specs">
+                            <span><i class="fas fa-tag"></i> Hochiki / Aritech</span>
+                            <span><i class="fas fa-fire"></i> 512 détecteurs</span>
+                        </div>
+                        <div class="equip-product-footer">
+                            <span class="equip-price">Sur devis</span>
+                            <button class="btn-add-cart" data-name="Centrale Alarme Incendie Adressable EN54" data-img="equipement/12.webp" data-cat="Alarme Incendie" aria-label="Ajouter au panier">
+                                <i class="fas fa-cart-plus"></i> Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 13 — Terminal biométrique ZKTeco -->
+            <div class="col-lg-3 col-md-4 col-sm-6 equip-col" data-category="alarme">
+                <div class="equip-product-card">
+                    <div class="equip-img-container">
+                        <img src="equipement/13.jpg" alt="Terminal biométrique empreinte RFID ZKTeco" loading="lazy">
+                    </div>
+                    <div class="equip-product-body">
+                        <div class="equip-category-tag">Contrôle d'accès Biométrique</div>
+                        <h5 class="equip-product-name">Terminal Biométrique Empreinte + RFID</h5>
+                        <p class="equip-product-desc">Terminal contrôle d'accès : empreinte digitale + carte RFID, 3000 empreintes, gestion présences, PoE, Wiegand.</p>
+                        <div class="equip-specs">
+                            <span><i class="fas fa-tag"></i> ZKTeco / Hikvision</span>
+                            <span><i class="fas fa-fingerprint"></i> 3000 empreintes</span>
+                        </div>
+                        <div class="equip-product-footer">
+                            <span class="equip-price">Sur devis</span>
+                            <button class="btn-add-cart" data-name="Terminal Biométrique Empreinte + RFID" data-img="equipement/13.jpg" data-cat="Contrôle Accès" aria-label="Ajouter au panier">
+                                <i class="fas fa-cart-plus"></i> Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 14 — Traceur GPS véhicule -->
+            <div class="col-lg-3 col-md-4 col-sm-6 equip-col" data-category="gps">
+                <div class="equip-product-card">
+                    <div class="equip-img-container">
+                        <img src="equipement/14.jpg" alt="Traceur GPS GSM GPRS véhicule Teltonika" loading="lazy">
+                        <span class="equip-badge badge-new">Populaire</span>
+                    </div>
+                    <div class="equip-product-body">
+                        <div class="equip-category-tag">GPS Tracking Véhicule</div>
+                        <h5 class="equip-product-name">Traceur GPS Véhicule GSM/GPRS</h5>
+                        <p class="equip-product-desc">Tracker GPS/GPRS temps réel, alertes SMS, historique des trajets, coupure moteur à distance, antenne intégrée.</p>
+                        <div class="equip-specs">
+                            <span><i class="fas fa-tag"></i> Teltonika / Queclink</span>
+                            <span><i class="fas fa-map-marker-alt"></i> GPS temps réel</span>
+                        </div>
+                        <div class="equip-product-footer">
+                            <span class="equip-price">Sur devis</span>
+                            <button class="btn-add-cart" data-name="Traceur GPS Véhicule GSM/GPRS" data-img="equipement/14.jpg" data-cat="GPS Tracking" aria-label="Ajouter au panier">
+                                <i class="fas fa-cart-plus"></i> Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 15 — Téléphone IP SIP -->
+            <div class="col-lg-3 col-md-4 col-sm-6 equip-col" data-category="telephonie">
+                <div class="equip-product-card">
+                    <div class="equip-img-container">
+                        <img src="equipement/15.webp" alt="Téléphone IP SIP Grandstream GXP1625" loading="lazy">
+                    </div>
+                    <div class="equip-product-body">
+                        <div class="equip-category-tag">Téléphones IP SIP</div>
+                        <h5 class="equip-product-name">Téléphone IP SIP 2 Lignes PoE</h5>
+                        <p class="equip-product-desc">Téléphone IP SIP 2 comptes, écran LCD rétroéclairé, PoE, compatible 3CX / FreePBX / Asterisk / Yeastar.</p>
+                        <div class="equip-specs">
+                            <span><i class="fas fa-tag"></i> Grandstream / Yealink</span>
+                            <span><i class="fas fa-phone"></i> SIP / VoIP PoE</span>
+                        </div>
+                        <div class="equip-product-footer">
+                            <span class="equip-price">Sur devis</span>
+                            <button class="btn-add-cart" data-name="Téléphone IP SIP 2 Lignes PoE" data-img="equipement/15.webp" data-cat="Téléphones IP" aria-label="Ajouter au panier">
+                                <i class="fas fa-cart-plus"></i> Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 16 — IPBX Hybride Yeastar -->
+            <div class="col-lg-3 col-md-4 col-sm-6 equip-col" data-category="telephonie">
+                <div class="equip-product-card">
+                    <div class="equip-img-container">
+                        <img src="equipement/16.jpg" alt="IPBX Hybride Yeastar S100 IP+Analogique" loading="lazy">
+                        <span class="equip-badge badge-pop">Hybride</span>
+                    </div>
+                    <div class="equip-product-body">
+                        <div class="equip-category-tag">IPBX / PABX Hybride</div>
+                        <h5 class="equip-product-name">IPBX Hybride IP + Analogique</h5>
+                        <p class="equip-product-desc">Centrale téléphonique hybride IP + analogique, 100 extensions, IVR, messagerie vocale, enregistrement appels.</p>
+                        <div class="equip-specs">
+                            <span><i class="fas fa-tag"></i> Yeastar / Panasonic</span>
+                            <span><i class="fas fa-exchange-alt"></i> IP + Analogique</span>
+                        </div>
+                        <div class="equip-product-footer">
+                            <span class="equip-price">Sur devis</span>
+                            <button class="btn-add-cart" data-name="IPBX Hybride IP + Analogique" data-img="equipement/16.jpg" data-cat="IPBX Hybride" aria-label="Ajouter au panier">
+                                <i class="fas fa-cart-plus"></i> Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 17 — Patch panel 24 ports Cat6 -->
+            <div class="col-lg-3 col-md-4 col-sm-6 equip-col" data-category="cables">
+                <div class="equip-product-card">
+                    <div class="equip-img-container">
+                        <img src="equipement/17.webp" alt="Patch panel 24 ports Cat6 blindé 1U 19 pouces" loading="lazy">
+                    </div>
+                    <div class="equip-product-body">
+                        <div class="equip-category-tag">Panneaux de Brassage</div>
+                        <h5 class="equip-product-name">Patch Panel 24 Ports Cat6 Blindé</h5>
+                        <p class="equip-product-desc">Panneau de brassage 24 ports RJ45 Cat6 FTP blindé, 1U rack 19 pouces, avec étiquettes, IDC Cat6 intégré.</p>
+                        <div class="equip-specs">
+                            <span><i class="fas fa-tag"></i> Legrand / Nexans</span>
+                            <span><i class="fas fa-server"></i> 1U 19" rack</span>
+                        </div>
+                        <div class="equip-product-footer">
+                            <span class="equip-price">Sur devis</span>
+                            <button class="btn-add-cart" data-name="Patch Panel 24 Ports Cat6 Blindé 1U" data-img="equipement/17.webp" data-cat="Panneaux de Brassage" aria-label="Ajouter au panier">
+                                <i class="fas fa-cart-plus"></i> Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 18 — Armoire réseau 19" -->
+            <div class="col-lg-3 col-md-4 col-sm-6 equip-col" data-category="reseau">
+                <div class="equip-product-card">
+                    <div class="equip-img-container">
+                        <img src="equipement/18.webp" alt="Armoire réseau rack 19 pouces 12U" loading="lazy">
+                    </div>
+                    <div class="equip-product-body">
+                        <div class="equip-category-tag">Armoires & Baies Réseau</div>
+                        <h5 class="equip-product-name">Armoire Réseau 19" 12U avec Ventilation</h5>
+                        <p class="equip-product-desc">Armoire de brassage 19 pouces 12U, porte vitrée, serrure, 2 ventilateurs, passe-câbles, pieds réglables.</p>
+                        <div class="equip-specs">
+                            <span><i class="fas fa-tag"></i> Legrand / Triton</span>
+                            <span><i class="fas fa-server"></i> 12U 19"</span>
+                        </div>
+                        <div class="equip-product-footer">
+                            <span class="equip-price">Sur devis</span>
+                            <button class="btn-add-cart" data-name="Armoire Réseau 19 pouces 12U" data-img="equipement/18.webp" data-cat="Armoires Réseau" aria-label="Ajouter au panier">
+                                <i class="fas fa-cart-plus"></i> Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 19 — Onduleur UPS -->
+            <div class="col-lg-3 col-md-4 col-sm-6 equip-col" data-category="reseau">
+                <div class="equip-product-card">
+                    <div class="equip-img-container">
+                        <img src="equipement/19.webp" alt="Onduleur UPS APC 1000VA protection réseau" loading="lazy">
+                    </div>
+                    <div class="equip-product-body">
+                        <div class="equip-category-tag">Onduleurs UPS</div>
+                        <h5 class="equip-product-name">Onduleur UPS 1000VA / 600W</h5>
+                        <p class="equip-product-desc">Alimentation sans interruption 1000VA/600W, protection surtensions, autonomie 30 min., port USB, 6 prises.</p>
+                        <div class="equip-specs">
+                            <span><i class="fas fa-tag"></i> APC / Eaton</span>
+                            <span><i class="fas fa-bolt"></i> 1000VA / 600W</span>
+                        </div>
+                        <div class="equip-product-footer">
+                            <span class="equip-price">Sur devis</span>
+                            <button class="btn-add-cart" data-name="Onduleur UPS 1000VA 600W" data-img="equipement/19.webp" data-cat="Onduleurs UPS" aria-label="Ajouter au panier">
+                                <i class="fas fa-cart-plus"></i> Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 20 — Détecteur fumée adressable -->
+            <div class="col-lg-3 col-md-4 col-sm-6 equip-col" data-category="alarme">
+                <div class="equip-product-card">
+                    <div class="equip-img-container">
+                        <img src="equipement/20.webp" alt="Détecteur fumée optique adressable EN54-7" loading="lazy">
+                    </div>
+                    <div class="equip-product-body">
+                        <div class="equip-category-tag">Détection Incendie</div>
+                        <h5 class="equip-product-name">Détecteur Fumée Optique Adressable</h5>
+                        <p class="equip-product-desc">Détecteur optique de fumée adressable EN54-7, auto-test intégré, indicateur LED, compatible centrales Hochiki.</p>
+                        <div class="equip-specs">
+                            <span><i class="fas fa-tag"></i> Hochiki / Apollo</span>
+                            <span><i class="fas fa-fire"></i> Norme EN54-7</span>
+                        </div>
+                        <div class="equip-product-footer">
+                            <span class="equip-price">Sur devis</span>
+                            <button class="btn-add-cart" data-name="Détecteur Fumée Optique Adressable EN54" data-img="equipement/20.webp" data-cat="Détection Incendie" aria-label="Ajouter au panier">
+                                <i class="fas fa-cart-plus"></i> Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 21 — Convertisseur média fibre -->
+            <div class="col-lg-3 col-md-4 col-sm-6 equip-col" data-category="cables">
+                <div class="equip-product-card">
+                    <div class="equip-img-container">
+                        <img src="equipement/21.webp" alt="Convertisseur média RJ45 vers fibre optique Gigabit" loading="lazy">
+                    </div>
+                    <div class="equip-product-body">
+                        <div class="equip-category-tag">Convertisseurs Fibre</div>
+                        <h5 class="equip-product-name">Convertisseur Média RJ45 ↔ Fibre Gigabit</h5>
+                        <p class="equip-product-desc">Convertisseur Ethernet Gigabit vers fibre optique (monomode/multimode), distance 20 à 120km, plug and play.</p>
+                        <div class="equip-specs">
+                            <span><i class="fas fa-tag"></i> TP-Link / Netlink</span>
+                            <span><i class="fas fa-exchange-alt"></i> Gigabit / 120km</span>
+                        </div>
+                        <div class="equip-product-footer">
+                            <span class="equip-price">Sur devis</span>
+                            <button class="btn-add-cart" data-name="Convertisseur Média RJ45 Fibre Gigabit" data-img="equipement/21.webp" data-cat="Fibre Optique" aria-label="Ajouter au panier">
+                                <i class="fas fa-cart-plus"></i> Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 22 — Câble alarme incendie -->
+            <div class="col-lg-3 col-md-4 col-sm-6 equip-col" data-category="cables">
+                <div class="equip-product-card">
+                    <div class="equip-img-container">
+                        <img src="equipement/22.webp" alt="Câble alarme incendie 2 paires blindé rouge" loading="lazy">
+                    </div>
+                    <div class="equip-product-body">
+                        <div class="equip-category-tag">Câbles Signalisation</div>
+                        <h5 class="equip-product-name">Câble Alarme Incendie 2 Paires — Anti-flamme</h5>
+                        <p class="equip-product-desc">Câble de signalisation incendie 2x2x0.8mm, blindé, gaine rouge résistante aux flammes, norme C2 / CR1.</p>
+                        <div class="equip-specs">
+                            <span><i class="fas fa-tag"></i> Nexans</span>
+                            <span><i class="fas fa-fire"></i> Résistant flamme</span>
+                        </div>
+                        <div class="equip-product-footer">
+                            <span class="equip-price">Sur devis</span>
+                            <button class="btn-add-cart" data-name="Câble Alarme Incendie 2 Paires Anti-flamme" data-img="equipement/22.webp" data-cat="Câbles Alarme" aria-label="Ajouter au panier">
+                                <i class="fas fa-cart-plus"></i> Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 23 — Caméra thermique bi-spectre -->
+            <div class="col-lg-3 col-md-4 col-sm-6 equip-col" data-category="cameras">
+                <div class="equip-product-card">
+                    <div class="equip-img-container">
+                        <img src="equipement/23.webp" alt="Caméra thermique bi-spectre Hikvision périmètre" loading="lazy">
+                        <span class="equip-badge badge-pop">Thermique</span>
+                    </div>
+                    <div class="equip-product-body">
+                        <div class="equip-category-tag">Caméras Thermiques</div>
+                        <h5 class="equip-product-name">Caméra Thermique Bi-Spectre Périmètre</h5>
+                        <p class="equip-product-desc">Caméra bi-spectrale thermique + optique, détection humain/véhicule en nuit totale, portée 500m, alarme automatique.</p>
+                        <div class="equip-specs">
+                            <span><i class="fas fa-tag"></i> Hikvision</span>
+                            <span><i class="fas fa-thermometer-half"></i> Thermique 500m</span>
+                        </div>
+                        <div class="equip-product-footer">
+                            <span class="equip-price">Sur devis</span>
+                            <button class="btn-add-cart" data-name="Caméra Thermique Bi-Spectre Périmètre" data-img="equipement/23.webp" data-cat="Caméras Thermiques" aria-label="Ajouter au panier">
+                                <i class="fas fa-cart-plus"></i> Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 24 — Sirène flash alarme -->
+            <div class="col-lg-3 col-md-4 col-sm-6 equip-col" data-category="alarme">
+                <div class="equip-product-card">
+                    <div class="equip-img-container">
+                        <img src="equipement/24.webp" alt="Sirène flash alarme extérieure 100dB IP65" loading="lazy">
+                    </div>
+                    <div class="equip-product-body">
+                        <div class="equip-category-tag">Signalisation Alarme</div>
+                        <h5 class="equip-product-name">Sirène Flash Alarme Extérieure 100dB</h5>
+                        <p class="equip-product-desc">Sirène piézoélectrique avec flash stroboscopique, 100dB, IP65, 12V, pour alarme intrusion ou incendie.</p>
+                        <div class="equip-specs">
+                            <span><i class="fas fa-tag"></i> Aritech / Honeywell</span>
+                            <span><i class="fas fa-volume-up"></i> 100dB / IP65</span>
+                        </div>
+                        <div class="equip-product-footer">
+                            <span class="equip-price">Sur devis</span>
+                            <button class="btn-add-cart" data-name="Sirène Flash Alarme Extérieure 100dB" data-img="equipement/24.webp" data-cat="Signalisation Alarme" aria-label="Ajouter au panier">
+                                <i class="fas fa-cart-plus"></i> Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 25 — Switch industriel DIN -->
+            <div class="col-lg-3 col-md-4 col-sm-6 equip-col" data-category="reseau">
+                <div class="equip-product-card">
+                    <div class="equip-img-container">
+                        <img src="equipement/25.webp" alt="Switch industriel DIN rail 8 ports Moxa" loading="lazy">
+                    </div>
+                    <div class="equip-product-body">
+                        <div class="equip-category-tag">Switches Industriels</div>
+                        <h5 class="equip-product-name">Switch Industriel DIN Rail 8 Ports</h5>
+                        <p class="equip-product-desc">Switch industriel 8 ports Gigabit, montage DIN rail, température -40°C à +75°C, IP30, MTBF > 300 000 heures.</p>
+                        <div class="equip-specs">
+                            <span><i class="fas fa-tag"></i> Moxa / Phoenix</span>
+                            <span><i class="fas fa-industry"></i> -40°C / +75°C</span>
+                        </div>
+                        <div class="equip-product-footer">
+                            <span class="equip-price">Sur devis</span>
+                            <button class="btn-add-cart" data-name="Switch Industriel DIN Rail 8 Ports" data-img="equipement/25.webp" data-cat="Switches Industriels" aria-label="Ajouter au panier">
+                                <i class="fas fa-cart-plus"></i> Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 26 — Câble coaxial RG6 -->
+            <div class="col-lg-3 col-md-4 col-sm-6 equip-col" data-category="cables">
+                <div class="equip-product-card">
+                    <div class="equip-img-container">
+                        <img src="equipement/26.webp" alt="Câble coaxial RG6 75 ohm blindé 100m" loading="lazy">
+                    </div>
+                    <div class="equip-product-body">
+                        <div class="equip-category-tag">Câbles Coaxiaux</div>
+                        <h5 class="equip-product-name">Câble Coaxial RG6 75Ω Blindé — 100m</h5>
+                        <p class="equip-product-desc">Câble coaxial RG6 75Ω double blindage pour caméras AHD/TVI/CVI et antennes TV, bobine 100m, perte faible.</p>
+                        <div class="equip-specs">
+                            <span><i class="fas fa-tag"></i> Belden / Times</span>
+                            <span><i class="fas fa-ruler"></i> 100m / RG6</span>
+                        </div>
+                        <div class="equip-product-footer">
+                            <span class="equip-price">Sur devis</span>
+                            <button class="btn-add-cart" data-name="Câble Coaxial RG6 75Ω Double Blindage 100m" data-img="equipement/26.webp" data-cat="Câbles Coaxiaux" aria-label="Ajouter au panier">
+                                <i class="fas fa-cart-plus"></i> Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 27 — Firewall UTM -->
+            <div class="col-lg-3 col-md-4 col-sm-6 equip-col" data-category="reseau">
+                <div class="equip-product-card">
+                    <div class="equip-img-container">
+                        <img src="equipement/27.webp" alt="Pare-feu Firewall UTM Fortinet IPS VPN PME" loading="lazy">
+                        <span class="equip-badge badge-pop">Sécurité</span>
+                    </div>
+                    <div class="equip-product-body">
+                        <div class="equip-category-tag">Firewall / Sécurité Réseau</div>
+                        <h5 class="equip-product-name">Pare-feu UTM — IPS, VPN, Filtrage Web</h5>
+                        <p class="equip-product-desc">Firewall UTM avec IPS/IDS, VPN SSL/IPsec, filtrage web et DNS, antivirus gateway, idéal pour PME et entreprises.</p>
+                        <div class="equip-specs">
+                            <span><i class="fas fa-tag"></i> Fortinet / pfSense</span>
+                            <span><i class="fas fa-shield-alt"></i> UTM complet</span>
+                        </div>
+                        <div class="equip-product-footer">
+                            <span class="equip-price">Sur devis</span>
+                            <button class="btn-add-cart" data-name="Pare-feu UTM IPS VPN Filtrage Web" data-img="equipement/27.webp" data-cat="Sécurité Réseau" aria-label="Ajouter au panier">
+                                <i class="fas fa-cart-plus"></i> Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- /equip-grid -->
+
+        <div class="equip-order-note text-center mt-4" data-aos="fade-up">
+            <i class="fas fa-info-circle text-orange me-2"></i>
+            <span>Tous les prix sont <strong>sur devis</strong>. Ajoutez des produits au panier puis cliquez sur <strong>"Commander via WhatsApp"</strong> — notre équipe vous répond sous 30 minutes.</span>
+        </div>
+
+    </div>
+</section>
+
+<!-- ===== CHIFFRES CLÉS ===== -->
+<section class="chiffres-section py-5" aria-label="Chiffres clés KDigit">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="section-title">Chiffres <span class="text-orange">Clés</span></h2>
+        </div>
+        <div class="row g-4 text-center">
+            <div class="col-6 col-md-3" data-aos="zoom-in">
+                <div class="chiffre-card">
+                    <div class="binaire" id="binaire1">10100101</div>
+                    <div class="chiffre-num"><span id="chiffre1">0</span>+</div>
+                    <div class="chiffre-label">Projets réalisés</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="100">
+                <div class="chiffre-card">
+                    <div class="binaire" id="binaire2">11010010</div>
+                    <div class="chiffre-num"><span id="chiffre2">0</span>+</div>
+                    <div class="chiffre-label">Clients satisfaits</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="200">
+                <div class="chiffre-card">
+                    <div class="binaire" id="binaire3">10010110</div>
+                    <div class="chiffre-num"><span id="chiffre3">0</span>+</div>
+                    <div class="chiffre-label">Installations livrées</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="300">
+                <div class="chiffre-card">
+                    <div class="binaire" id="binaire4">11101001</div>
+                    <div class="chiffre-num"><span id="chiffre4">0</span></div>
+                    <div class="chiffre-label">Domaines d'expertise</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== PARTENAIRES ===== -->
+<section id="partenaires" class="partenaires-section py-5" aria-label="Nos partenaires clients et fournisseurs">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="section-title">Nos <span class="text-orange">Partenaires</span></h2>
+            <p class="section-subtitle">Ils nous font confiance — entreprises et institutions de référence au Cameroun</p>
+        </div>
+
+        <div class="row g-4 justify-content-center mb-5" data-aos="fade-up" data-aos-delay="100">
+
+            <!-- HIKVISION -->
+            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                <div class="partner-card partner-featured">
+                    <div class="partner-logo-wrap">
+                        <img src="images/Hikvision-Logo.png" alt="Logo Hikvision partenaire officiel KDigit Cameroun" loading="lazy"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="partner-logo-fallback" style="display:none;"><i class="fas fa-camera"></i></div>
+                    </div>
+                    <div class="partner-info">
+                        <span class="partner-name">HIKVISION</span>
+                        <span class="partner-type">Fabricant officiel<br>Caméras & NVR</span>
+                    </div>
+                    <div class="partner-badge-official"><i class="fas fa-check-circle me-1"></i>Partenaire officiel</div>
+                </div>
+            </div>
+
+            <!-- HÔTEL SAINT JOSEPH -->
+            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                <div class="partner-card">
+                    <div class="partner-logo-wrap partner-logo-icon">
+                        <i class="fas fa-hotel"></i>
+                    </div>
+                    <div class="partner-info">
+                        <span class="partner-name">Hôtel Saint Joseph</span>
+                        <span class="partner-type">Hôtellerie<br>Douala, CM</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PEOPLE STUFF TECHNOLOGIE -->
+            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                <div class="partner-card">
+                    <div class="partner-logo-wrap partner-logo-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="partner-info">
+                        <span class="partner-name">People Stuff Technologie</span>
+                        <span class="partner-type">Technologie<br>Cameroun</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HYSACAM -->
+            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                <div class="partner-card">
+                    <div class="partner-logo-wrap partner-logo-icon">
+                        <i class="fas fa-recycle"></i>
+                    </div>
+                    <div class="partner-info">
+                        <span class="partner-name">HYSACAM</span>
+                        <span class="partner-type">Services publics<br>Cameroun</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ASQUINI -->
+            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                <div class="partner-card">
+                    <div class="partner-logo-wrap partner-logo-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <div class="partner-info">
+                        <span class="partner-name">ASQUINI</span>
+                        <span class="partner-type">Industrie<br>Cameroun</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECA -->
+            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                <div class="partner-card">
+                    <div class="partner-logo-wrap">
+                        <img src="images/logoSECA" alt="Logo SECA partenaire KDigit" loading="lazy"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="partner-logo-fallback" style="display:none;"><i class="fas fa-building"></i></div>
+                    </div>
+                    <div class="partner-info">
+                        <span class="partner-name">SECA</span>
+                        <span class="partner-type">Entreprise<br>Cameroun</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PEACE RESIDENCES -->
+            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                <div class="partner-card">
+                    <div class="partner-logo-wrap partner-logo-icon">
+                        <i class="fas fa-umbrella-beach"></i>
+                    </div>
+                    <div class="partner-info">
+                        <span class="partner-name">Peace Residences &amp; Resorts</span>
+                        <span class="partner-type">Hôtellerie luxe<br>Cameroun</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bandeau défilant -->
+        <div class="partners-ticker-wrap" data-aos="fade-up" data-aos-delay="200" aria-hidden="true">
+            <div class="partners-ticker">
+                <div class="ticker-track">
+                    <span>HIKVISION</span><span class="ticker-dot">•</span>
+                    <span>Hôtel Saint Joseph</span><span class="ticker-dot">•</span>
+                    <span>People Stuff Technologie</span><span class="ticker-dot">•</span>
+                    <span>HYSACAM</span><span class="ticker-dot">•</span>
+                    <span>ASQUINI</span><span class="ticker-dot">•</span>
+                    <span>SECA</span><span class="ticker-dot">•</span>
+                    <span>Peace Residences &amp; Resorts</span><span class="ticker-dot">•</span>
+                    <span>HIKVISION</span><span class="ticker-dot">•</span>
+                    <span>Hôtel Saint Joseph</span><span class="ticker-dot">•</span>
+                    <span>People Stuff Technologie</span><span class="ticker-dot">•</span>
+                    <span>HYSACAM</span><span class="ticker-dot">•</span>
+                    <span>ASQUINI</span><span class="ticker-dot">•</span>
+                    <span>SECA</span><span class="ticker-dot">•</span>
+                    <span>Peace Residences &amp; Resorts</span><span class="ticker-dot">•</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ===== LABORATOIRE ===== -->
+<section id="labo" class="labo-section py-5" aria-label="Laboratoire d'innovation KDigit">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="section-title">Laboratoire <span class="text-orange">KDigit</span></h2>
+            <p class="section-subtitle">KDigit innove — projets en cours de développement</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3" data-aos="fade-up">
+                <div class="labo-card">
+                    <div class="labo-badge">BETA</div>
+                    <i class="fas fa-eye labo-icon"></i>
+                    <h4>Reconnaissance Faciale</h4>
+                    <p>Contrôle d'accès intelligent par reconnaissance faciale pour entreprises au Cameroun.</p>
+                    <div class="labo-progress"><div class="labo-bar" style="width:75%"></div></div>
+                    <small class="text-orange">75% complété</small>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                <div class="labo-card">
+                    <div class="labo-badge">BETA</div>
+                    <i class="fas fa-leaf labo-icon"></i>
+                    <h4>Domotique Basse Conso</h4>
+                    <p>Solutions domotiques adaptées au Cameroun — robustesse et faible consommation d'énergie.</p>
+                    <div class="labo-progress"><div class="labo-bar" style="width:55%"></div></div>
+                    <small class="text-orange">55% complété</small>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                <div class="labo-card">
+                    <div class="labo-badge">BETA</div>
+                    <i class="fas fa-lock labo-icon"></i>
+                    <h4>Formation Cybersécurité</h4>
+                    <p>Programme certifiant en cybersécurité adapté aux besoins des entreprises locales.</p>
+                    <div class="labo-progress"><div class="labo-bar" style="width:40%"></div></div>
+                    <small class="text-orange">40% complété</small>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                <div class="labo-card">
+                    <div class="labo-badge">BETA</div>
+                    <i class="fas fa-broadcast-tower labo-icon"></i>
+                    <h4>Connexion Sans Fibre</h4>
+                    <p>Interconnexion de sites distants sans fibre — radio, microwave et réseau maillé.</p>
+                    <div class="labo-progress"><div class="labo-bar" style="width:60%"></div></div>
+                    <small class="text-orange">60% complété</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== À PROPOS ===== -->
+<section id="a-propos" class="about-section py-5" aria-label="À propos de KDigit Wide Solution Integrator">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6" data-aos="fade-right">
+                <h2 class="section-title text-start">À propos de <span class="text-orange">KDigit</span></h2>
+                <p class="about-text">
+                    <strong>KDigit</strong> est une marque technologique de <strong>Wide Solution Integrator Ltd</strong>,
+                    basée à Douala, Cameroun. Spécialisée dans l'intégration de solutions numériques et la fourniture
+                    d'équipements réseau professionnels, KDigit accompagne entreprises et institutions dans la conception,
+                    le déploiement et la maintenance d'infrastructures technologiques.
+                </p>
+                <div class="mission-vision mt-4">
+                    <div class="mission-item">
+                        <i class="fas fa-bullseye text-orange"></i>
+                        <div><h4>Notre Mission</h4><p>Simplifier la technologie pour booster la performance de nos clients.</p></div>
+                    </div>
+                    <div class="mission-item">
+                        <i class="fas fa-eye text-orange"></i>
+                        <div><h4>Notre Vision</h4><p>Devenir le leader camerounais des infrastructures technologiques intelligentes.</p></div>
+                    </div>
+                </div>
+                <div class="values mt-4">
+                    <h4>Nos Valeurs</h4>
+                    <div class="values-grid">
+                        <span class="value-tag">Expertise</span>
+                        <span class="value-tag">Intégrité</span>
+                        <span class="value-tag">Réactivité</span>
+                        <span class="value-tag">Innovation locale</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="about-image">
+                    <img src="images/equipe-collage.jpeg" alt="Équipe KDigit techniciens réseau Douala Cameroun"
+                         class="img-fluid rounded-3" loading="lazy" width="600" height="500">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="contact-section py-5" aria-label="Formulaire de contact KDigit Douala">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="section-title">Contactez-<span class="text-orange">nous</span></h2>
+            <p class="section-subtitle">Demandez un devis gratuit ou commandez du matériel réseau</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 mx-auto" data-aos="fade-up">
+                <form name="contact" method="POST" netlify data-netlify="true" action="/#success"
+                      class="contact-form" id="smartForm" novalidate>
+                    <input type="hidden" name="form-name" value="contact">
+                    <!-- honeypot anti-spam -->
+                    <input type="text" name="bot-field" style="display:none" aria-hidden="true" tabindex="-1">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <label for="nom" class="form-label">Nom complet *</label>
+                            <input type="text" class="form-control" id="nom" name="nom" placeholder="Jean Dupont"
+                                   required minlength="2" autocomplete="name">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="ville" class="form-label">Ville *</label>
+                            <input type="text" class="form-control" id="ville" name="ville" placeholder="Douala" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="pays" class="form-label">Pays *</label>
+                            <select class="form-select" id="pays" name="pays" required>
+                                <option value="" disabled selected>-- Sélectionnez --</option>
+                                <option value="Cameroun">🇨🇲 Cameroun</option>
+                                <option value="Côte d'Ivoire">🇨🇮 Côte d'Ivoire</option>
+                                <option value="Sénégal">🇸🇳 Sénégal</option>
+                                <option value="Gabon">🇬🇦 Gabon</option>
+                                <option value="Congo">🇨🇬 Congo</option>
+                                <option value="RDC">🇨🇩 RDC</option>
+                                <option value="Nigeria">🇳🇬 Nigeria</option>
+                                <option value="France">🇫🇷 France</option>
+                                <option value="Autre">🌍 Autre</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="telephone" class="form-label">Téléphone WhatsApp *</label>
+                            <input type="tel" class="form-control" id="telephone" name="telephone"
+                                   placeholder="+237 6XX XXX XXX" required autocomplete="tel">
+                        </div>
+                        <div class="col-12">
+                            <label for="email" class="form-label">Email *</label>
+                            <input type="email" class="form-control" id="email" name="email"
+                                   placeholder="votre@email.com" required autocomplete="email">
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Type de demande *</label>
+                            <div class="demande-type">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="type_demande"
+                                           id="typeDevis" value="devis" checked>
+                                    <label class="form-check-label" for="typeDevis">Demande de devis (service)</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="type_demande"
+                                           id="typeAchat" value="achat">
+                                    <label class="form-check-label" for="typeAchat">Achat de matériel</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Champs devis -->
+                        <div class="col-12" id="devisFields">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="service" class="form-label">Service concerné *</label>
+                                    <select class="form-select" id="service" name="service">
+                                        <option value="" disabled selected>-- Choisissez --</option>
+                                        <option value="Reseaux">Réseaux intelligents (LAN/WAN/WiFi)</option>
+                                        <option value="Securite">Sécurité bâtiments</option>
+                                        <option value="GPS">Alarmes GPS/GSM</option>
+                                        <option value="Automatisation">Automatisation & domotique</option>
+                                        <option value="Hardware">Matériel informatique</option>
+                                        <option value="Telephonie">Téléphonie IP</option>
+                                        <option value="Formation">Formation IT</option>
+                                        <option value="Consulting">Consulting</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="description" class="form-label">Description du besoin</label>
+                                    <input type="text" class="form-control" id="description" name="description"
+                                           placeholder="Décrivez brièvement votre projet">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Champs achat -->
+                        <div class="col-12" id="achatFields" style="display:none;">
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <label for="categorie" class="form-label">Catégorie *</label>
+                                    <select class="form-select" id="categorie" name="categorie">
+                                        <option value="" disabled selected>-- Catégorie --</option>
+                                        <option value="cameras">Caméras & NVR</option>
+                                        <option value="switches">Switches & Routeurs</option>
+                                        <option value="wifi">Bornes WiFi & Antennes</option>
+                                        <option value="cables">Câbles & Connectiques</option>
+                                        <option value="alarme">Alarmes & Contrôle d'accès</option>
+                                        <option value="gps">GPS & Tracking</option>
+                                        <option value="telephonie">Téléphonie IP</option>
+                                        <option value="autre">Autre</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="produit" class="form-label">Produit souhaité *</label>
+                                    <input type="text" class="form-control" id="produit" name="produit"
+                                           placeholder="Ex: NVR 16 canaux Hikvision">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="quantite" class="form-label">Quantité</label>
+                                    <input type="number" class="form-control" id="quantite" name="quantite"
+                                           min="1" value="1">
+                                </div>
+                                <div class="col-12">
+                                    <label for="precisions" class="form-label">Précisions</label>
+                                    <textarea class="form-control" id="precisions" name="precisions" rows="2"
+                                              placeholder="Références, spécifications, délai souhaité..."></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="message" class="form-label">Message (optionnel)</label>
+                            <textarea class="form-control" id="message" name="message" rows="3"
+                                      placeholder="Informations complémentaires..."></textarea>
+                        </div>
+                        <div class="col-12 text-center">
+                            <button type="submit" class="btn btn-orange btn-lg px-5">
+                                <i class="fas fa-paper-plane me-2"></i>Envoyer
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Infos contact -->
+        <div class="row mt-5 g-4">
+            <div class="col-md-4 text-center" data-aos="fade-up">
+                <div class="contact-info-card">
+                    <i class="fab fa-whatsapp text-orange"></i>
+                    <h4>WhatsApp</h4>
+                    <p>
+                        <a href="https://wa.me/237693404172" target="_blank" rel="noopener noreferrer"
+                           aria-label="Envoyer un message WhatsApp à KDigit">+237 693 404 172</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center" data-aos="fade-up" data-aos-delay="100">
+                <div class="contact-info-card">
+                    <i class="fab fa-facebook text-orange"></i>
+                    <h4>Facebook</h4>
+                    <p>
+                        <a href="https://www.facebook.com/intelligenceartificiell/about/" target="_blank"
+                           rel="noopener noreferrer" aria-label="Page Facebook KDigit">Page KDigit</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center" data-aos="fade-up" data-aos-delay="200">
+                <div class="contact-info-card">
+                    <i class="fas fa-map-marker-alt text-orange"></i>
+                    <h4>Localisation</h4>
+                    <p>Batibois, Douala, Cameroun</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer" role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="footer-logo">
+                    <img src="images/logo.jpeg" width="160" height="80" alt="Logo KDigit Cameroun" loading="lazy">
+                </div>
+                <p>Solutions IT & Sécurité Intelligente au Cameroun. Intégrateur de solutions numériques et fournisseur d'équipements réseau à Douala.</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/intelligenceartificiell/about/" target="_blank"
+                       rel="noopener noreferrer" aria-label="Page Facebook KDigit">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://wa.me/237693404172" target="_blank"
+                       rel="noopener noreferrer" aria-label="WhatsApp KDigit +237 693 404 172">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 mb-4">
+                <h5>Navigation</h5>
+                <ul class="footer-links">
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#realisations">Réalisations</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#equipements">Équipements</a></li>
+                    <li><a href="#partenaires">Partenaires</a></li>
+                    <li><a href="#labo">Laboratoire</a></li>
+                    <li><a href="#a-propos">À propos</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5>Nos Services</h5>
+                <ul class="footer-links">
+                    <li><a href="#services">Réseaux intelligents</a></li>
+                    <li><a href="#services">Sécurité bâtiments</a></li>
+                    <li><a href="#services">Alarmes GPS/GSM</a></li>
+                    <li><a href="#services">Automatisation</a></li>
+                    <li><a href="#services">Téléphonie IP</a></li>
+                    <li><a href="#services">Formation IT</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 mb-4">
+                <h5>Contact</h5>
+                <ul class="footer-contact">
+                    <li>
+                        <i class="fab fa-whatsapp"></i>
+                        <a href="https://wa.me/237693404172" target="_blank" rel="noopener noreferrer">+237 693 404 172</a>
+                    </li>
+                    <li>
+                        <i class="fab fa-facebook"></i>
+                        <a href="https://www.facebook.com/intelligenceartificiell/about/" target="_blank" rel="noopener noreferrer">Page Facebook KDigit</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Batibois, Douala, Cameroun</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="text-center">
+            <p>© 2025 KDigit — Tous droits réservés. Réalisé par <strong>FONDJO FOMO AUDREY</strong> — Stage Wide Solution Integrator Ltd, Douala, Cameroun.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- LIGHTBOX GALERIE -->
+<div id="lightbox" class="lightbox-overlay" role="dialog" aria-modal="true" aria-label="Galerie photo" onclick="closeLightbox()">
+    <button class="lb-close" onclick="closeLightbox()" aria-label="Fermer la galerie">✕</button>
+    <button class="lb-prev" onclick="event.stopPropagation();lbNav(-1)" aria-label="Photo précédente">&#8249;</button>
+    <img id="lb-img" src="" alt="" onclick="event.stopPropagation()">
+    <button class="lb-next" onclick="event.stopPropagation();lbNav(1)" aria-label="Photo suivante">&#8250;</button>
+</div>
+
+<!-- LIGHTBOX PROJETS -->
+<div id="projLightbox" class="lightbox-overlay" role="dialog" aria-modal="true" onclick="closeProjLb()">
+    <button class="lb-close" onclick="closeProjLb()" aria-label="Fermer">✕</button>
+    <img id="projLbImg" src="" alt="" onclick="event.stopPropagation()" style="max-width:88vw;max-height:86vh;object-fit:contain">
+    <video id="projLbVid" controls style="display:none;max-width:88vw;max-height:86vh" onclick="event.stopPropagation()"></video>
+</div>
+
+<!-- SCRIPTS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="script1.js"></script>
+</body>
+</html>
